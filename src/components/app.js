@@ -8,6 +8,7 @@ import Dashboard from './dashboard';
 import LogIn from './LogIn';
 import RegistrationPage from './registration-page';
 import { refreshAuthToken } from '../actions/auth';
+import {API_BASE_URL} from '../config';
 
 export class App extends React.Component {
     componentDidUpdate(prevProps) {
@@ -42,7 +43,7 @@ export class App extends React.Component {
     render() {
         return (
             <div className="app">
-              
+                <p>This is the api_base_url: {API_BASE_URL}</p>
                 <HeaderBar />
                 <Route exact path="/dashboard" component={Dashboard} />
                 <Route exact path="/" component={LandingPage} />

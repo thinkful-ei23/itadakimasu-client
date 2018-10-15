@@ -14,8 +14,7 @@ export function LandingPage(props) {
         <div className="home">
             <h2>Idadakimasu!</h2>
             <p>Do you know what to order in a Japanese restaurant?  Itadakimasu! will help you learn the names of different dishes. Try it out.</p>
-            {/* <LoginForm /> */}
-            <Link to="/login-form">Log In</Link>
+            <Link to="/login">LogIn</Link>
             <Link to="/register">Register</Link>
         </div>
     );

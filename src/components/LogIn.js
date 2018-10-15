@@ -12,7 +12,7 @@ export function LogIn(props) {
     }
     return (
         <div className="home">
-            <h2>Login to Itadakimasu!</h2>
+            <h2>Login to Itadakimasu</h2>
             <LoginForm />
             <p>Don't have an account? Register <Link to="/register">here</Link></p>
         </div>

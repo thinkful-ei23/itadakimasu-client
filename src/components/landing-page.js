@@ -1,8 +1,8 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {Link, Redirect} from 'react-router-dom';
+import { connect } from 'react-redux';
+import { Link, Redirect } from 'react-router-dom';
 
-import LoginForm from './login-form';
+// import LoginForm from './login-form';
 
 export function LandingPage(props) {
     // If we are logged in redirect straight to the user's dashboard
@@ -12,7 +12,8 @@ export function LandingPage(props) {
 
     return (
         <div className="home">
-            <h2>Welcome to Foo App</h2>
+            <h2>Idadakimasu!</h2>
+            <p>Do you know what to order in a Japanese restaurant?  Itadakimasu! will help you learn the names of different dishes. Try it out.</p>
             <Link to="/login">LogIn</Link>
             <Link to="/register">Register</Link>
         </div>

@@ -12,7 +12,7 @@ export function LandingPage(props) {
 
     return (
         <div className="home">
-            <h2>Idadakimasu!</h2>
+            <h2>Itadakimasu!</h2>
             <p>Do you know what to order in a Japanese restaurant?  Itadakimasu! will help you learn the names of different dishes. Try it out.</p>
             <Link to="/login">LogIn</Link>
             <Link to="/register">Register</Link>

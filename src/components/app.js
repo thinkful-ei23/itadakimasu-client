@@ -42,14 +42,10 @@ export class App extends React.Component {
     render() {
         return (
             <div className="app">
-                <hr />
-
-
+              
                 <HeaderBar />
-                <Dashboard />
-                {/* <Route exact path="/dashboard" component={Dashboard} /> */}
-                {/* <Route exact path="/" component={LandingPage} />
-
+                <Route exact path="/dashboard" component={Dashboard} />
+                <Route exact path="/" component={LandingPage} />
                 <Route exact path="/register" component={RegistrationPage} />
                 <Route exact path="/login" component={LogIn} /> */}
             </div>
@@ -64,12 +60,3 @@ const mapStateToProps = state => ({
 
 // Deal with update blocking - https://reacttraining.com/react-router/web/guides/dealing-with-update-blocking
 export default withRouter(connect(mapStateToProps)(App));
-
-
-
-
- /* <Dashboard />
-    <LandingPage />
-    <RegistrationPage />
-    <LogIn />
-*/

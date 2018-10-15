@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { clearAuth } from '../actions/auth';
 import { clearAuthToken } from '../local-storage';
+import { Link } from 'react-router-dom';
 
 export class HeaderBar extends React.Component {
     logOut() {
@@ -19,7 +20,7 @@ export class HeaderBar extends React.Component {
         }
         return (
             <div className="header-bar">
-                <h1>Itadakimasu!</h1>
+                <Link to="/dashboard"><h1>Itadakimasu!</h1> </Link>
                 {logOutButton}
             </div>
         );

@@ -19,12 +19,11 @@ body {
 	background-color: rebeccapurple;
 }
 .dash{
-	/* border: .3rem solid green; */
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: center;
-	margin: 3rem;
+	margin: 2rem;
 }
 .dash-pic {
 	display: flex;

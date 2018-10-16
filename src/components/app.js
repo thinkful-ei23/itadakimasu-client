@@ -8,7 +8,7 @@ import Dashboard from './dashboard';
 import LogIn from './LogIn';
 import RegistrationPage from './registration-page';
 import { refreshAuthToken } from '../actions/auth';
-import {API_BASE_URL} from '../config';
+// import { API_BASE_URL } from '../config';
 
 export class App extends React.Component {
     componentDidUpdate(prevProps) {

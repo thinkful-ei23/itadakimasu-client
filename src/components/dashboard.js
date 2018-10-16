@@ -7,6 +7,43 @@ export class Dashboard extends React.Component {
   componentDidMount() {
     this.props.dispatch(fetchQuestion());
   }
+
+  state = {
+    answer: '',
+    submitted: false,
+    message: ''
+  }
+
+  setAnswer(e) {
+    console.log(e.target.value);
+    const answer = e.target.value.toLowerCase();
+    this.setState({
+      answer
+    });
+  }
+
+  submitAnswer() {
+    console.log('submitAnswer ran!');
+    const answer = this.state.answer;
+    this.setState({
+      submitted: true
+    });
+
+    if (answer === this.props.currentQuestion.answer) {
+      const message = 'You`re correct!';
+      this.setState({
+        message
+      });
+    }
+
+    else {
+      const message = `Sorry, the correct answer is ${this.props.currentQuestion.answer}`;
+      this.setState({
+        message
+      });
+    }
+  }
+
   render() {
     let number = this.props.number;
     let answers = this.props.answers;
@@ -23,7 +60,7 @@ export class Dashboard extends React.Component {
           Hello, {this.props.username}
         </div>
 
-        <section classsName="dash-input">
+        <section className="dash-input">
           <div className="dash-pic">
             <img className="image" src={this.props.currentQuestion.imageURL} alt="this drawing" />
             <p>{this.props.currentQuestion.question}</p>
@@ -32,15 +69,20 @@ export class Dashboard extends React.Component {
           <div>
             <input id="input-Answer "
               className="input-Answer"
-              type="text" />
+              type="text"
+              onChange={(e) => this.setAnswer(e)}
+              />
           </div>
 
           <div>
-            <button className="submit">Submit</button>
+            <button 
+              className="submit"
+              onClick={() => this.submitAnswer()}
+              >Submit</button>
           </div>
 
           <div>
-            <p>Right! or Sorry, the correct answer is ...</p>
+            <p>{this.state.message}</p>
           </div>
 
           <div>

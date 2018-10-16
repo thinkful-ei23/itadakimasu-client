@@ -22,15 +22,15 @@ export const fetchQuestion = () => (dispatch, getState) => {
 	dispatch(fetchQuestionRequest());
 	const authToken = getState().auth.authToken;
 
-	return fetch(`${API_BASE_URL}/question`, {
+	fetch(`${API_BASE_URL}/question`, {
 		method: 'GET',
 		headers: {
 			Authorization: `Bearer ${authToken}`
 		}
-	})
+		})
 		.then(res => normalizeResponseErrors(res))
 		.then(res => res.json())
-		.then((question) => dispatch(fetchQuestionSuccess))
+		.then((question) => dispatch(fetchQuestionSuccess(question)))
 		.catch(err => {
 			dispatch(fetchQuestionError(err));
 		});

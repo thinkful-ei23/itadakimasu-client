@@ -5,11 +5,23 @@ import requiresLogin from './requires-login';
 
 
 export class Dashboard extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {arrayOfQuestions: [{imageUrl: null, question: "YOOO", answer: 'yah'}, {imageUrl: null, question: "YOOO", answer: 'yah'}], currentQuestion: null}
+    }
+
     componentDidMount() {
-        // this.props.dispatch(fetchProtectedData());
+        let currentQuestion = this.state.arrayOfQuestions[0];
+        this.setState({currentQuestion});
+
     }
 
     render() {
+        let question;
+        if (this.state.currentQuestion) {
+            question = this.state.currentQuestion.question;
+        }
         let number = this.props.number;
         let answers = this.props.answers;
         return (
@@ -21,7 +33,7 @@ export class Dashboard extends React.Component {
           <section classsName="dash-input">
                     <div className="dash-pic">
                         <img className="image" src="/img/trebleBassHeart.png" alt="alternate food description" />
-
+                    <p>{question}</p>
                     </div>
                     <div>
                         <input id="input-Answer "

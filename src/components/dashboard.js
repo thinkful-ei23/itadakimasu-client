@@ -5,11 +5,18 @@ import { fetchQuestion } from '../actions/question'
 
 export class Dashboard extends React.Component {
   componentDidMount() {
+    this.getNextQuestion();
+  }
+
+  getNextQuestion() {
     this.props.dispatch(fetchQuestion());
   }
+
   render() {
     let number = this.props.number;
     let answers = this.props.answers;
+    let nextButton;
+
     if (!this.props.currentQuestion) {
       return (
         <div>
@@ -17,6 +24,14 @@ export class Dashboard extends React.Component {
         </div>
       );
     }
+
+    if (true) { // this needs to change based on Tarik's work
+        nextButton = 
+        <div>
+            <button onClick={() => this.getNextQuestion()} className="next">Next</button>
+        </div>;
+    }
+
     return (
       <section className="dashboard">
         <div className="dashboard-username">
@@ -46,10 +61,8 @@ export class Dashboard extends React.Component {
           <div>
             <p># {number} correct out of all {answers}</p>
           </div>
+          {nextButton}
 
-          <div>
-            <button className="next">Next</button>
-          </div>
         </section >
       </section >
     );

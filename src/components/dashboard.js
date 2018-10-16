@@ -1,19 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import requiresLogin from './requires-login';
-
+import { fetchQuestion } from '../actions/question'
 
 export class Dashboard extends React.Component {
   componentDidMount() {
     this.props.dispatch(fetchQuestion());
   }
   render() {
-    // let number = this.props.number;
-    // let answers = this.props.answers;
+    let number = this.props.number;
+    let answers = this.props.answers;
     if (!this.props.currentQuestion) {
       return (
         <div>
-          <img src="/img/gude_loading.png" />
+          <img src="/img/gude_loading.png" alt="gudetama resting" />
         </div>
       );
     }
@@ -25,7 +25,7 @@ export class Dashboard extends React.Component {
 
         <section classsName="dash-input">
           <div className="dash-pic">
-            <img className="image" src={this.props.currentQuestion.imageURL} alt="this picture" />
+            <img className="image" src={this.props.currentQuestion.imageURL} alt="this drawing" />
             <p>{this.props.currentQuestion.question}</p>
           </div>
 

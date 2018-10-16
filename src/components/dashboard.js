@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import requiresLogin from './requires-login';
-import { fetchQuestion } from '../actions/question'
-
+import { fetchQuestion } from '../actions/question';
+import './dashboard.css';
 export class Dashboard extends React.Component {
     constructor(props) {
         super(props);
@@ -74,8 +74,8 @@ export class Dashboard extends React.Component {
     console.log(this.state.submitted);
     if (this.state.submitted) { 
         nextButton = 
-        <div>
-            <button onClick={() => this.getNextQuestion()} className="next">Next</button>
+        <div className="dash">
+            <button onClick={() => this.getNextQuestion()} className="next btn">Next</button>
         </div>;
     }
 
@@ -85,35 +85,37 @@ export class Dashboard extends React.Component {
           Hello, {this.props.username}
         </div>
 
-        <section className="dash-input">
-          <div className="dash-pic">
+
+        <section classsName="dash-input">
+          <div className="dash dash-pic">
+
             <img className="image" src={this.props.currentQuestion.imageURL} alt="this drawing" />
-            <p>{this.props.currentQuestion.question}</p>
+            <p className="character">{this.props.currentQuestion.question}</p>
           </div>
             <form onSubmit={(e) => this.submitAnswer(e)}>
-                <div>
+                <div className="dash">
                     <input id="input-Answer "
                     className="input-Answer"
                     type="text"
                     ref={input => this.textInput = input}
                     />
                 </div>
-                <div>
+                <div className="dash">
                     <button 
-                    className="submit"
+                    className="submit btn"
                     >Submit</button>
                 </div>
             </form>
 
-          <div>
-            <p>{this.state.message}</p>
+          <div className="dash">
+            <p className="results">{this.state.message}</p>
           </div>
 
-          <div>
-            <p>{this.state.correct} correct out of {this.state.questionsAsked}</p>
+          <div className="dash">
+            <p className="results">{this.state.correct} correct out of {this.state.questionsAsked}</p>
+
           </div>
           {nextButton}
-
         </section >
       </section >
     );
@@ -129,3 +131,4 @@ const mapStateToProps = state => {
 };
 
 export default requiresLogin()(connect(mapStateToProps)(Dashboard));
+

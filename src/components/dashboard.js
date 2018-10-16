@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import requiresLogin from './requires-login';
-import { fetchQuestion } from '../actions/question'
-
+import { fetchQuestion } from '../actions/question';
+import './dashboard.css';
 export class Dashboard extends React.Component {
   componentDidMount() {
     this.props.dispatch(fetchQuestion());
@@ -24,31 +24,31 @@ export class Dashboard extends React.Component {
         </div>
 
         <section classsName="dash-input">
-          <div className="dash-pic">
+          <div className="dash dash-pic">
             <img className="image" src={this.props.currentQuestion.imageURL} alt="this drawing" />
-            <p>{this.props.currentQuestion.question}</p>
+            <p className="character">{this.props.currentQuestion.question}</p>
           </div>
 
-          <div>
+          <div className="dash">
             <input id="input-Answer "
               className="input-Answer"
               type="text" />
           </div>
 
-          <div>
-            <button className="submit">Submit</button>
+          <div className="dash">
+            <button className="submit btn">Submit</button>
           </div>
 
-          <div>
-            <p>Right! or Sorry, the correct answer is ...</p>
+          <div className="dash">
+            <p className="results">Right! or Sorry, the correct answer is ...</p>
           </div>
 
-          <div>
-            <p># {number} correct out of all {answers}</p>
+          <div className="dash">
+            <p className="results"># {number} correct out of all {answers}</p>
           </div>
 
-          <div>
-            <button className="next">Next</button>
+          <div className="dash">
+            <button className="next btn">Next</button>
           </div>
         </section >
       </section >
@@ -65,3 +65,4 @@ const mapStateToProps = state => {
 };
 
 export default requiresLogin()(connect(mapStateToProps)(Dashboard));
+// export default (connect(mapStateToProps)(Dashboard));

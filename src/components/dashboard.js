@@ -8,7 +8,9 @@ export class Dashboard extends React.Component {
         super(props);
         this.state = {
             submitted: false,
-            message: ''
+            message: '',
+            questionsAsked: 0,
+            correct: 0
         }
     }
   
@@ -40,6 +42,12 @@ export class Dashboard extends React.Component {
       this.setState({
         message
       });
+      this.setState({
+        questionsAsked: this.state.questionsAsked + 1
+      });
+      this.setState({
+        correct: this.state.correct + 1
+      });
     }
 
     else {
@@ -47,12 +55,13 @@ export class Dashboard extends React.Component {
       this.setState({
         message
       });
+      this.setState({
+        questionsAsked: this.state.questionsAsked + 1
+      });
     }
   }
 
   render() {
-    let number = this.props.number;
-    let answers = this.props.answers;
     let nextButton;
 
     if (!this.props.currentQuestion) {
@@ -101,7 +110,7 @@ export class Dashboard extends React.Component {
           </div>
 
           <div>
-            <p># {number} correct out of all {answers}</p>
+            <p>{this.state.correct} correct out of {this.state.questionsAsked}</p>
           </div>
           {nextButton}
 

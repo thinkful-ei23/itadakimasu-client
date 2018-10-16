@@ -4,35 +4,38 @@ import requiresLogin from './requires-login';
 import { fetchQuestion } from '../actions/question'
 
 export class Dashboard extends React.Component {
-  componentDidMount() {
-    this.props.dispatch(fetchQuestion());
-  }
-
-  constructor(props) {
+    constructor(props) {
         super(props);
         this.state = {
-            answer: '',
             submitted: false,
             message: ''
         }
     }
-
-  setAnswer(e) {
-    console.log(e.target.value);
-    const answer = e.target.value.toLowerCase();
-    this.setState({
-      answer
-    });
+  
+  componentDidMount() {
+    this.props.dispatch(fetchQuestion());
   }
 
-  submitAnswer() {
+  clearValues() {
+    this.setState({message: ''});
+    this.setState({submitted: false});
+    this.textInput.value = '';
+  }
+
+  getNextQuestion() {
+    this.props.dispatch(fetchQuestion());
+    this.clearValues();
+  }
+
+  submitAnswer(e) {
+    e.preventDefault();
     console.log('submitAnswer ran!');
-    const answer = this.state.answer;
+    const answer = this.textInput.value;
     this.setState({
       submitted: true
     });
 
-    if (answer === this.props.currentQuestion.answer) {
+    if (answer.toLowerCase() === this.props.currentQuestion.answer) {
       const message = 'You`re correct!';
       this.setState({
         message
@@ -50,6 +53,8 @@ export class Dashboard extends React.Component {
   render() {
     let number = this.props.number;
     let answers = this.props.answers;
+    let nextButton;
+
     if (!this.props.currentQuestion) {
       return (
         <div>
@@ -57,6 +62,14 @@ export class Dashboard extends React.Component {
         </div>
       );
     }
+    console.log(this.state.submitted);
+    if (this.state.submitted) { 
+        nextButton = 
+        <div>
+            <button onClick={() => this.getNextQuestion()} className="next">Next</button>
+        </div>;
+    }
+
     return (
       <section className="dashboard">
         <div className="dashboard-username">
@@ -68,21 +81,20 @@ export class Dashboard extends React.Component {
             <img className="image" src={this.props.currentQuestion.imageURL} alt="this drawing" />
             <p>{this.props.currentQuestion.question}</p>
           </div>
-
-          <div>
-            <input id="input-Answer "
-              className="input-Answer"
-              type="text"
-              onChange={(e) => this.setAnswer(e)}
-              />
-          </div>
-
-          <div>
-            <button 
-              className="submit"
-              onClick={() => this.submitAnswer()}
-              >Submit</button>
-          </div>
+            <form onSubmit={(e) => this.submitAnswer(e)}>
+                <div>
+                    <input id="input-Answer "
+                    className="input-Answer"
+                    type="text"
+                    ref={input => this.textInput = input}
+                    />
+                </div>
+                <div>
+                    <button 
+                    className="submit"
+                    >Submit</button>
+                </div>
+            </form>
 
           <div>
             <p>{this.state.message}</p>
@@ -91,10 +103,8 @@ export class Dashboard extends React.Component {
           <div>
             <p># {number} correct out of all {answers}</p>
           </div>
+          {nextButton}
 
-          <div>
-            <button className="next">Next</button>
-          </div>
         </section >
       </section >
     );

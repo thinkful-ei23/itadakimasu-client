@@ -8,11 +8,14 @@ export class Dashboard extends React.Component {
     this.props.dispatch(fetchQuestion());
   }
 
-  state = {
-    answer: '',
-    submitted: false,
-    message: ''
-  }
+  constructor(props) {
+        super(props);
+        this.state = {
+            answer: '',
+            submitted: false,
+            message: ''
+        }
+    }
 
   setAnswer(e) {
     console.log(e.target.value);

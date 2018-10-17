@@ -1,4 +1,4 @@
-body {
+.dashboard {
 	background-color: #FEEDA1;
 	padding: 2rem;
 	font-family: "Lato", sans-serif;
@@ -9,22 +9,20 @@ body {
 
 .dashboard-username {
 	text-align: center;
-	font-size: 4rem;
+	font-size: 2rem;
 }
 .dash-input {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: center;
-	background-color: rebeccapurple;
 }
 .dash{
-	/* border: .3rem solid green; */
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: center;
-	margin: 3rem;
+	margin: 2rem;
 }
 .dash-pic {
 	display: flex;
@@ -40,31 +38,36 @@ body {
 	margin-left: auto;
 }
 .character{
-	color: black;
+	color:#777;
 	margin: 1rem 0;
 	font-size: 4rem;
-  letter-spacing: 2rem;
+  letter-spacing: 3rem;
 	text-align: center;
 }
-
-#input-Answer{
-	/* width: 100%; */
-	font-size: 4rem;
-	height: 3rem;
+.label {
+	font-size: 1.5rem;
+	padding-left: 1rem;
+	color: #777;
+}
+input[type=text] {
+	font-size: 3rem;
+}
+input[type=text]:focus {
+	background-color: #fff;
 }
 .results {
 	font-size: 2rem;
 	text-align: center;
 }
-
 .btn {
 	background-color: #fff;
 	color: brown;
 	border-radius: 1rem;
 	padding: .5rem;
-	width: 100%;
+	/* width: 100%; */
 	font-size: 2rem;
 	text-transform: uppercase;
+	box-shadow: 0 .4rem .6rem 0 hsla(0, 0%, 0%, 0.2);
 }
 .btn:hover,
 .btn:active {

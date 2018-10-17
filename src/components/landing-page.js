@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link, Redirect } from 'react-router-dom';
-
+import './landing.css';
 
 export function LandingPage(props) {
     // If we are logged in redirect straight to the user's dashboard
@@ -11,9 +11,13 @@ export function LandingPage(props) {
 
     return (
         <div className="home">
-            <p>Do you know what to order in a Japanese restaurant?  Itadakimasu! will help you learn the names of different dishes. Try it out.</p>
-            <Link to="/login">LogIn</Link>
-            <Link to="/register">Register</Link>
+            <p className="intro">Do you know what to order in a Japanese restaurant?  Itadakimasu! will help you learn the names of different dishes. Try it out. I needed more text to see how it would work out with the image. maybe I should try other images on other pages.</p>
+            <div className="btn-row">
+                <Link to="/login" className="btn-land">LogIn</Link>
+                <Link to="/register" className="btn-land">Register</Link>
+
+                <div className="corner-pic" id="corner-pic"><img url="/img/resting.png" /></div>
+            </div>
         </div>
     );
 }

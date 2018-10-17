@@ -1,0 +1,28 @@
+.login-form {
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+justify-content: center;
+/* background-image: */
+}
+input[type=text],
+input[type=password] {
+	font-size: 2.5rem;
+}
+.btn-in {
+	width: 50%;
+	background-color: #fff;
+	color: brown;
+	border-radius: 1rem;
+	font-size: 1.5rem;
+	padding: 1rem;
+	line-height: 1rem;
+	text-transform: uppercase;
+	box-shadow: 0 .4rem .6rem 0 hsla(0, 0%, 0%, 0.2);
+}
+.btn:hover,
+.btn:active {
+	background-color: brown;
+	color: #fff
+}
+

@@ -1,0 +1,34 @@
+.header-bar {
+	background-color: #777;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-around;
+	box-shadow: 0 .4rem .6rem 0 hsla(0, 0%, 0%, 0.2);
+}
+h1 {
+	font-size: 4rem;
+	color: #FEEDA1;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 1rem;
+}
+.link {
+	text-decoration: none;
+}
+.btn-out {
+	margin-top: 2.3rem;
+	height: 4rem;
+	background-color: #ddd;
+	color: brown;
+	border-radius: 1rem;
+	font-size: 1.5rem;
+	padding: 0 1rem;
+	text-transform: uppercase;
+	box-shadow: 0 .4rem .6rem 0 hsla(0, 0%, 0%, 0.2);
+}
+.btn-out:hover,
+.btn-out:active {
+	background-color: brown;
+	color: #fff
+}

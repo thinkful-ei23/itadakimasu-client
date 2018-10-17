@@ -13,7 +13,7 @@ export class Dashboard extends React.Component {
             correct: 0
         }
     }
-  
+
   componentDidMount() {
     this.props.dispatch(fetchQuestion());
   }
@@ -72,8 +72,8 @@ export class Dashboard extends React.Component {
       );
     }
     console.log(this.state.submitted);
-    if (this.state.submitted) { 
-        nextButton = 
+    if (this.state.submitted) {
+        nextButton =
         <div className="dash">
             <button onClick={() => this.getNextQuestion()} className="next btn">Next</button>
         </div>;
@@ -94,6 +94,7 @@ export class Dashboard extends React.Component {
           </div>
             <form onSubmit={(e) => this.submitAnswer(e)}>
                 <div className="dash">
+                <label className="label">Type the answer below</label>
                     <input id="input-Answer "
                     className="input-Answer"
                     type="text"
@@ -101,7 +102,7 @@ export class Dashboard extends React.Component {
                     />
                 </div>
                 <div className="dash">
-                    <button 
+                    <button
                     className="submit btn"
                     >Submit</button>
                 </div>

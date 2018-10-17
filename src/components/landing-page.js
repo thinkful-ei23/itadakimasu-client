@@ -15,8 +15,9 @@ export function LandingPage(props) {
             <div className="btn-row">
                 <Link to="/login" className="btn-land">LogIn</Link>
                 <Link to="/register" className="btn-land">Register</Link>
+
+                <div className="corner-pic" id="corner-pic"><img url="/img/resting.png" /></div>
             </div>
-            <div className="corner-pic" id="corner-pic"><img url="/img/resting.png" /></div>
         </div>
     );
 }

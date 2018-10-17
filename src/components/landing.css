@@ -5,9 +5,9 @@
 	flex-wrap: wrap;
 	background-color: #fff;
 
- /* background-image: linear-gradient(to right, rgba(245, 180, 61, 0.2), rgba(245, 180, 61, 0.6)); */
- /* background-image: linear-gradient(to right, rgba(245, 180, 61, 0.2), rgba(245, 180, 61, 0.6)), url("/img/resting.png");
-	*/
+ background-image: linear-gradient(to right, rgba(245, 180, 61, 0.2), rgba(245, 180, 61, 0.6));
+ /* background-image: linear-gradient(to right, rgba(245, 180, 61, 0.2), rgba(245, 180, 61, 0.6)), url("/img/resting.png"); */
+
 	/* background-image: linear-gradient(to right, rgba(119, 119, 119, 0.2), rgba(119, 119, 119, 0.6)), url("/img/resting.png"); */
 
 	/* background-image: url("/img/resting.png"); */
@@ -16,8 +16,8 @@
 	/* background-position: center bottom; */
 	/* background-attachment: fixed; */
 
-	background: url(/img/resting.png) no-repeat center fixed;
-    background-size: contain;
+	/* background: url(/img/resting.png) no-repeat center fixed; */
+    /* background-size: contain; */
 }
 
 #corner-pic {

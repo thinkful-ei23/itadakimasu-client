@@ -20,32 +20,36 @@ export class LoginForm extends React.Component {
             );
         }
         return (
-            <form
-                className="login-form"
-                onSubmit={this.props.handleSubmit(values =>
-                    this.onSubmit(values)
-                )}>
-                {error}
-                <label htmlFor="username" className="label-login">Username</label>
-                <Field
-                    component={Input}
-                    type="text"
-                    name="username"
-                    id="username"
-                    validate={[required, nonEmpty]}
-                />
-                <label htmlFor="password" className="label-login">Password</label>
-                <Field
-                    component={Input}
-                    type="password"
-                    name="password"
-                    id="password"
-                    validate={[required, nonEmpty]}
-                />
-                <button className="btn-in" disabled={this.props.pristine || this.props.submitting}>
-                    Log in
+            <section className="login-form">
+                <form
+                    // className="login-form"
+                    onSubmit={this.props.handleSubmit(values =>
+                        this.onSubmit(values)
+                    )}>
+                    {error}
+                    <label htmlFor="username" className="label-login">Username</label>
+                    <Field
+                        className="field-login"
+                        component={Input}
+                        type="text"
+                        name="username"
+                        id="username"
+                        validate={[required, nonEmpty]}
+                    />
+                    <label htmlFor="password" className="label-login">Password</label>
+                    <Field
+                        className="field-login"
+                        component={Input}
+                        type="password"
+                        name="password"
+                        id="password"
+                        validate={[required, nonEmpty]}
+                    />
+                    <button className="btn-in" disabled={this.props.pristine || this.props.submitting}>
+                        Log in
                 </button>
-            </form>
+                </form>
+            </section>
         );
     }
 }

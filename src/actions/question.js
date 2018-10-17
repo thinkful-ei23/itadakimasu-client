@@ -36,6 +36,43 @@ export const fetchQuestion = () => (dispatch, getState) => {
 		});
 };
 
+export const POST_RESULT_REQUEST = 'POST_RESULT_REQUEST';
+export const postResultRequest = () => ({
+	type: POST_RESULT_REQUEST
+});
+
+export const POST_RESULT_SUCCESS = 'POST_RESULT_REQUEST';
+export const postResultSuccess = () => ({
+  type: POST_RESULT_SUCCESS
+});
+
+export const POST_RESULT_ERROR = 'POST_RESULT_ERROR';
+export const postResultError = (error) => ({
+  type: POST_RESULT_ERROR,
+  error
+});
+
+export const postResult = (result) => (dispatch, getState) => {
+  dispatch(postResultRequest());
+  const authToken = getState().auth.authToken;
+
+  fetch(`${API_BASE_URL}/question`, {
+    method: 'POST',
+    body: JSON.stringify(result),
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${authToken}`
+    }
+  })
+  .then(res => normalizeResponseErrors(res))
+  .then(() => {
+    dispatch(postResultSuccess());
+  })
+  .catch(err => {
+    dispatch(postResultError(err));
+  });
+};
+
 
 
 

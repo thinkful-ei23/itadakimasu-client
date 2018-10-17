@@ -2,6 +2,9 @@ import {
 	FETCH_QUESTION_REQUEST,
 	FETCH_QUESTION_SUCCESS,
 	FETCH_QUESTION_ERROR,
+	POST_RESULT_REQUEST,
+  POST_RESULT_SUCCESS,
+  POST_RESULT_ERROR,
 } from '../actions/question';
 
 const initialState = {
@@ -28,6 +31,26 @@ export default function reducer(state = initialState, action) {
 			loading: false,
 		});
 	}
+
+	else if (action.type === POST_RESULT_REQUEST) {
+		return Object.assign({}, state, {
+			loading: true
+    });
+  }
+  
+  else if (action.type === POST_RESULT_SUCCESS) {
+    return Object.assign({}, state, {
+      loading: false
+    })
+  }
+  
+  else if (action.type === POST_RESULT_ERROR) {
+    return Object.assign({}, state, {
+      loading: false,
+      error: action.error
+    })
+  }
+  
 	return state;
 }
 

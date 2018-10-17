@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import requiresLogin from './requires-login';
-import { fetchQuestion } from '../actions/question';
+import { fetchQuestion, postResult } from '../actions/question';
 import './dashboard.css';
 
 export class Dashboard extends React.Component {
@@ -38,6 +38,8 @@ export class Dashboard extends React.Component {
       submitted: true
     });
 
+    let resQuestion
+
     if (answer.toLowerCase() === this.props.currentQuestion.answer) {
       const message = 'You`re correct!';
       this.setState({
@@ -49,6 +51,10 @@ export class Dashboard extends React.Component {
       this.setState({
         correct: this.state.correct + 1
       });
+
+      resQuestion = Object.assign({}, this.props.currentQuestion, {
+        memoryStr: this.props.currentQuestion.memoryStr*2
+      });
     }
 
     else {
@@ -59,7 +65,12 @@ export class Dashboard extends React.Component {
       this.setState({
         questionsAsked: this.state.questionsAsked + 1
       });
+
+      resQuestion = Object.assign({}, this.props.currentQuestion, {
+        memoryStr: 1
+      });
     }
+    this.props.dispatch(postResult(resQuestion));
   }
 
   render() {

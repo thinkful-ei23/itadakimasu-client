@@ -4,23 +4,23 @@ import requiresLogin from './requires-login';
 import { fetchQuestion } from '../actions/question';
 import './dashboard.css';
 export class Dashboard extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      submitted: false,
-      message: '',
-      questionsAsked: 0,
-      correct: 0
+    constructor(props) {
+        super(props);
+        this.state = {
+            submitted: false,
+            message: '',
+            questionsAsked: 0,
+            correct: 0
+        }
     }
-  }
 
   componentDidMount() {
     this.props.dispatch(fetchQuestion());
   }
 
   clearValues() {
-    this.setState({ message: '' });
-    this.setState({ submitted: false });
+    this.setState({message: ''});
+    this.setState({submitted: false});
     this.textInput.value = '';
   }
 
@@ -73,9 +73,9 @@ export class Dashboard extends React.Component {
     }
     console.log(this.state.submitted);
     if (this.state.submitted) {
-      nextButton =
+        nextButton =
         <div className="dash">
-          <button onClick={() => this.getNextQuestion()} className="next btn">Next</button>
+            <button onClick={() => this.getNextQuestion()} className="next btn">Next</button>
         </div>;
     }
 
@@ -92,21 +92,21 @@ export class Dashboard extends React.Component {
             <img className="image" src={this.props.currentQuestion.imageURL} alt="this drawing" />
             <p className="character">{this.props.currentQuestion.question}</p>
           </div>
-          <form onSubmit={(e) => this.submitAnswer(e)}>
-            <div className="dash">
-              <label className="label">Type the answer below</label>
-              <input id="input-Answer "
-                className="input-Answer"
-                type="text"
-                ref={input => this.textInput = input}
-              />
-            </div>
-            <div className="dash">
-              <button
-                className="submit btn"
-              >Submit</button>
-            </div>
-          </form>
+            <form onSubmit={(e) => this.submitAnswer(e)}>
+                <div className="dash">
+                <label className="label">Type the answer below</label>
+                    <input id="input-Answer "
+                    className="input-Answer"
+                    type="text"
+                    ref={input => this.textInput = input}
+                    />
+                </div>
+                <div className="dash">
+                    <button
+                    className="submit btn"
+                    >Submit</button>
+                </div>
+            </form>
 
           <div className="dash">
             <p className="results">{this.state.message}</p>

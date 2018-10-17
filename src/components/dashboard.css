@@ -1,4 +1,4 @@
-body {
+.dashboard {
 	background-color: #FEEDA1;
 	padding: 2rem;
 	font-family: "Lato", sans-serif;
@@ -64,7 +64,7 @@ input[type=text]:focus {
 	color: brown;
 	border-radius: 1rem;
 	padding: .5rem;
-	width: 100%;
+	/* width: 100%; */
 	font-size: 2rem;
 	text-transform: uppercase;
 	box-shadow: 0 .4rem .6rem 0 hsla(0, 0%, 0%, 0.2);

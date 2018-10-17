@@ -20,3 +20,8 @@ font-size: 1.3rem;
 color: #000;
 align-self: center;
 }
+
+.login-reg {
+	margin-left: auto;
+	margin-right: auto;
+}

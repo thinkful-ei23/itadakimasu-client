@@ -1,16 +1,24 @@
+
 .login-form {
 display: flex;
 flex-direction: column;
 flex-wrap: wrap;
-justify-content: center;
-/* background-image: */
+/* justify-content: center; */
+align-items: center;
+}
+.label-login {
+	font-size: 2rem;
+	color: #000000;
 }
 input[type=text],
 input[type=password] {
 	font-size: 2.5rem;
+	margin: 2rem;
+	border-radius: 1rem;
+	width: 100%;
 }
 .btn-in {
-	width: 50%;
+	width: 100%;
 	background-color: #fff;
 	color: brown;
 	border-radius: 1rem;
@@ -19,9 +27,10 @@ input[type=password] {
 	line-height: 1rem;
 	text-transform: uppercase;
 	box-shadow: 0 .4rem .6rem 0 hsla(0, 0%, 0%, 0.2);
+	margin: 2rem;
 }
-.btn:hover,
-.btn:active {
+.btn-in:hover,
+.btn-in:active {
 	background-color: brown;
 	color: #fff
 }

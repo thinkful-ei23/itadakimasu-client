@@ -16,7 +16,7 @@ export function LandingPage(props) {
                 <Link to="/login" className="btn-land">LogIn</Link>
                 <Link to="/register" className="btn-land">Register</Link>
             </div>
-            <div className="corner-pic" id="corner-pic"><img url="/img/resting.png" /></div>
+            <div className="corner-pic" id="corner-pic"></div>
 
         </div>
     );
@@ -24,6 +24,6 @@ export function LandingPage(props) {
 
 const mapStateToProps = state => ({
     loggedIn: state.auth.currentUser !== null
-});
+})
 
 export default connect(mapStateToProps)(LandingPage);

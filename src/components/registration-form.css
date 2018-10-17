@@ -1,0 +1,33 @@
+.login-form {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	}
+	.label-login {
+		font-size: 2rem;
+		color: #000000;
+		align-self: center;
+		margin-bottom: -1rem;
+	}
+	.btn-div {
+		text-align: center;
+	}
+	.btn-sub {
+		margin: 3rem 0;
+		max-width: 20rem;
+		padding: 1.5rem 1rem;
+		border-radius: 1rem;
+		background-color: #fff;
+		color: brown;
+		box-shadow: 0 .4rem .6rem 0 hsla(0, 0%, 0%, 0.2);
+		font-size: 2rem;
+		text-transform: uppercase;
+
+	}
+	.btn-sub:hover,
+	.btn-sub:active {
+		background-color: brown;
+		color: #fff;
+		border: transparent;
+	}

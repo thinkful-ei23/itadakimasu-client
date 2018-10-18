@@ -11,7 +11,7 @@ export function LandingPage(props) {
     }
     let loggedOutMessage;
     if (props.loggedOut) {
-        const pStyle = {fontSize: 20}
+        const pStyle = { fontSize: 20 }
         loggedOutMessage = <p style={pStyle}>You have successfully logged out</p>;
         setTimeout(() => props.dispatch(clearLoggedOut()), 4000);
     }
@@ -22,11 +22,11 @@ export function LandingPage(props) {
             <div className="btn-row">
                 <Link to="/login" className="btn-land btn-landL">LogIn</Link>
                 <Link to="/register" className="btn-land">Register</Link>
-                <div className="corner-pic" id="corner-pic"><img url="/img/resting.png" alt='Gudetama Resting' /></div>
-
             </div>
+            <div className="corner-pic" id="corner-pic"><img src="/img/resting.png" alt='Gudetama Resting' /></div>
+
             {loggedOutMessage}
-        </div>
+        </div >
     );
 }
 

@@ -4,11 +4,13 @@ import { clearAuth, setLoggedOut } from '../actions/auth';
 import { clearAuthToken } from '../local-storage';
 import { Link } from 'react-router-dom';
 import './header-bar.css';
+import { clearSessionData } from '../actions/question';
 
 export class HeaderBar extends React.Component {
     logOut() {
         this.props.dispatch(clearAuth());
         this.props.dispatch(setLoggedOut());
+        this.props.dispatch(clearSessionData());
         clearAuthToken();
     }
 

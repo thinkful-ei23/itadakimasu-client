@@ -23,7 +23,6 @@ export function LandingPage(props) {
                 <Link to="/login" className="btn-land btn-landL">LogIn</Link>
                 <Link to="/register" className="btn-land">Register</Link>
                 <div className="corner-pic" id="corner-pic"><img url="/img/resting.png" alt='Gudetama Resting' /></div>
-
             </div>
             {loggedOutMessage}
         </div>

@@ -43,7 +43,7 @@ export class Profile extends React.Component {
 
 			const userData = this.props.userData.map(question => (
 				<li key={question.index}>
-					<h3>Question {question.question}</h3>
+					<h3>Question: {question.question}</h3>
 					<p>You've got this question right {question.successes} times out of {question.attempts}</p>
 				</li>
 			));

@@ -18,7 +18,7 @@ export function LandingPage(props) {
 
     return (
         <div className="home">
-            <p className="intro">Do you know what to order in a Japanese restaurant?  Itadakimasu! will help you learn the names of different dishes. Try it out. I needed more text to see how it would work out with the image. maybe I should try other images on other pages.</p>
+            <p className="intro">Planning a trip to Japan? Itadakimasu is a quiz application that uses spaced repetition to teach you the names of common Japanese dishes. Start learning by signing up.</p>
             <div className="btn-row">
                 <Link to="/login" className="btn-land btn-landL">LogIn</Link>
                 <Link to="/register" className="btn-land">Register</Link>

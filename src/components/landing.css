@@ -4,52 +4,15 @@
 	justify-content: center;
 	flex-wrap: wrap;
 	background-color: #fff;
-
- background-image: linear-gradient(to right, rgba(245, 180, 61, 0.2), rgba(245, 180, 61, 0.6));
- /* background-image: linear-gradient(to right, rgba(245, 180, 61, 0.2), rgba(245, 180, 61, 0.6)), url("/img/resting.png"); */
-
-	/* background-image: linear-gradient(to right, rgba(119, 119, 119, 0.2), rgba(119, 119, 119, 0.6)), url("/img/resting.png"); */
-
-	/* background-image: url("/img/resting.png"); */
-	/* opacity: .1; */
-	/* background-repeat: no-repeat; */
-	/* background-position: center bottom; */
-	/* background-attachment: fixed; */
-
-	/* background: url(/img/resting.png) no-repeat center fixed; */
-    /* background-size: contain; */
+ 	background-image: linear-gradient(to right, rgba(245, 180, 61, 0.2), rgba(245, 180, 61, 0.6));
 }
-/*
 #corner-pic {
-	padding: 10rem 0;
-	background: url("/img/resting.png");
-	background-color: #fff;
-	background-size: 30rem auto;
-	background-position: center top;
-	background-repeat: no-repeat;
-} */
-
-#corner-pic {
-	/* <img url="/img/resting.png" /> */
-	padding: 13rem 0;
-	margin-bottom: 10rem;
-	background: url("/img/resting.png");
-	/* background-image: linear-gradient(to right, rgba(245, 180, 61, 0.2), rgba(245, 180, 61, 0.6)), url("/img/resting.png"); */
-	/* background-size: 30rem auto; */
-	background-position: center top;
-	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
 }
-/*
 .intro {
-	margin: 0 4rem;
-	font-size: 2.5rem;
-	line-height: 4rem;
-	padding: 3rem;
-	background-color: #eee;
-	color: #F5B43D;
-	box-shadow: 0 .4rem .6rem 0 hsla(0, 0%, 0%, 0.2);
-} */
-.intro { /*transparent */
 	margin: 0 4rem;
 	border: .1rem solid #000;
 	font-size: 2.5rem;

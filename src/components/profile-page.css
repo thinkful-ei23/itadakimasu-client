@@ -1,8 +1,5 @@
 body {
-	margin: 0;
-	padding: 1rem;
 	font-size: 2rem;
-
 }
 .results {
 	font-size: 2rem;
@@ -29,5 +26,14 @@ body {
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 	color: green;
-
+}
+.loadPage {
+	background-color: #FEDD15;
+	/* display: block;
+	margin-left:  auto;
+	margin-right: auto; */
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
 }

@@ -15,15 +15,17 @@ export class HeaderBar extends React.Component {
     render() {
         // Only render the log out button if we are logged in
         let logOutButton;
+        let profileLink;
         if (this.props.loggedIn) {
             logOutButton = (
                 <button className="btn-out" onClick={() => this.logOut()}>Log out</button>
             );
+            profileLink = <Link to="/profile" className="link"><h2>Your profile!</h2></Link>;
         }
         return (
             <div className="header-bar">
                 <Link to="/dashboard" className="link"><h1>Itadakimasu!</h1> </Link>
-                <Link to="/profile" className="link"><h2>Your profile!</h2></Link>
+                {profileLink}
                 {logOutButton}
             </div>
         );

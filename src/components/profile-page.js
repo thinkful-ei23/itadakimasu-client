@@ -40,12 +40,11 @@ export class Profile extends React.Component {
 			allSuccessses = this.calculateAllSucceses();
 			let allQuestionsAsked = 0;
 			allQuestionsAsked = this.calculateAllQuestionsAsked();
-			
+
 			const userData = this.props.userData.map(question => (
 				<li key={question.index}>
-					<h3>Question {question.index}</h3>
-					<p>Answer is {question.answer} </p>
-					<p>{question.successes}&nbsp;&nbsp;out of&nbsp;&nbsp;{question.attempts}</p>
+					<h3>Question {question.question}</h3>
+					<p>You've got this question right {question.successes} times out of {question.attempts}</p>
 				</li>
 			));
 

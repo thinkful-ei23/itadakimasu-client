@@ -17,18 +17,23 @@ h1 {
 	text-decoration: none;
 }
 .btn-out {
-	margin-top: 2.3rem;
-	height: 4rem;
+	margin-top: 2rem;
+	max-width: 20rem;
+	padding: 1.5rem 1rem;
+	border-radius: 1rem;
 	background-color: #ddd;
 	color: brown;
-	border-radius: 1rem;
-	font-size: 1.5rem;
-	padding: 0 1rem;
-	text-transform: uppercase;
 	box-shadow: 0 .4rem .6rem 0 hsla(0, 0%, 0%, 0.2);
+	font-size: 1.5rem;
+	/* TODO font size 2 in others */
+	text-transform: uppercase;
+/* TODO height andline-height ? */
+	height: 4rem;
+	line-height: 1rem;
 }
 .btn-out:hover,
 .btn-out:active {
 	background-color: brown;
-	color: #fff
+	color: #fff;
+	border: transparent;
 }

@@ -19,12 +19,23 @@
 	/* background: url(/img/resting.png) no-repeat center fixed; */
     /* background-size: contain; */
 }
-
+/*
 #corner-pic {
 	padding: 10rem 0;
 	background: url("/img/resting.png");
 	background-color: #fff;
 	background-size: 30rem auto;
+	background-position: center top;
+	background-repeat: no-repeat;
+} */
+
+#corner-pic {
+	/* <img url="/img/resting.png" /> */
+	padding: 13rem 0;
+	margin-bottom: 10rem;
+	background: url("/img/resting.png");
+	/* background-image: linear-gradient(to right, rgba(245, 180, 61, 0.2), rgba(245, 180, 61, 0.6)), url("/img/resting.png"); */
+	/* background-size: 30rem auto; */
 	background-position: center top;
 	background-repeat: no-repeat;
 }
@@ -56,15 +67,18 @@
 }
 .btn-land {
 	margin: 4rem 0;
+	max-width: 20rem;
+	padding: 1rem;
+	border-radius: 1rem;
 	background-color: #fff;
 	color: brown;
-	border-radius: 1rem;
-	padding: .5rem;
+	box-shadow: 0 .4rem .6rem 0 hsla(0, 0%, 0%, 0.2);
 	font-size: 2rem;
 	text-transform: uppercase;
-	box-shadow: 0 .4rem .6rem 0 hsla(0, 0%, 0%, 0.2);
 	text-decoration: none;
-	align-items: baseline;
+}
+.btn-landL {
+	padding: 1rem 2.4rem;
 }
 .btn-land:hover,
 .btn-land:active {

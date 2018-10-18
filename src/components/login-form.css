@@ -2,26 +2,36 @@
 display: flex;
 flex-direction: column;
 flex-wrap: wrap;
-justify-content: center;
-/* background-image: */
+align-items: center;
+
 }
+.label-login {
+	font-size: 2rem;
+	color: #000000;
+}
+field-login,
 input[type=text],
 input[type=password] {
 	font-size: 2.5rem;
+	border-radius: 1rem;
 }
 .btn-in {
-	width: 50%;
+	align-self:center;
+	max-width: 20rem;
+	padding: 1.5rem 1rem;
+	margin: 3rem 0;
+	border-radius: 1rem;
 	background-color: #fff;
 	color: brown;
-	border-radius: 1rem;
-	font-size: 1.5rem;
-	padding: 1rem;
-	line-height: 1rem;
-	text-transform: uppercase;
 	box-shadow: 0 .4rem .6rem 0 hsla(0, 0%, 0%, 0.2);
+	font-size: 2rem;
+	/* TODO check font size 1.5 */
+	line-height: 1rem;
+		/* TODO check line-height 0 in others */
+	text-transform: uppercase;
 }
-.btn:hover,
-.btn:active {
+.btn-in:hover,
+.btn-in:active {
 	background-color: brown;
 	color: #fff
 }

@@ -47,7 +47,9 @@ export class Dashboard extends React.Component {
       this.props.dispatch(incrementCorrect());
 
       resQuestion = Object.assign({}, this.props.currentQuestion, {
-        memoryStr: this.props.currentQuestion.memoryStr * 2
+        memoryStr: this.props.currentQuestion.memoryStr * 2,
+        attempts: this.props.currentQuestion.attempts + 1,
+        successes: this.props.currentQuestion.successes + 1
       });
     }
 
@@ -59,7 +61,8 @@ export class Dashboard extends React.Component {
       this.props.dispatch(incrementQuestions());
 
       resQuestion = Object.assign({}, this.props.currentQuestion, {
-        memoryStr: 1
+        memoryStr: 1,
+        attempts: this.props.currentQuestion.attempts + 1
       });
     }
     this.props.dispatch(postResult(resQuestion));
@@ -89,7 +92,7 @@ export class Dashboard extends React.Component {
           Hello, {this.props.username}
         </div>
 
-        <section classsName="dash-input">
+        <section className="dash-input">
           <div className="dash dash-pic">
 
             <img className="image" src={this.props.currentQuestion.imageURL} alt="this drawing" />

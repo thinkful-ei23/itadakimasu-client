@@ -16,7 +16,7 @@ export function LogIn(props) {
             <div className="home-login">
                 <h2>Log in to Itadakimasu</h2>
                 <LoginForm />
-                <p className="reg_link">Don't have an account? Go to <Link to="/register">register page</Link></p>
+                <p className="reg_link">Don't have an account? Go to <Link to="/register">registration page</Link></p>
             </div>
         </main>
     );

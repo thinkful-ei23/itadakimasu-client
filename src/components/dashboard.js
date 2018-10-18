@@ -86,7 +86,7 @@ export class Dashboard extends React.Component {
         </div>;
     }
     return (
-      <section className="dashboard">
+      <main className="dashboard">
         <div className="dashboard-username">
           Hello, {this.props.username}
         </div>
@@ -101,8 +101,8 @@ export class Dashboard extends React.Component {
           <div className="dash-answer">
             <form className="dash-answer" onSubmit={(e) => this.submitAnswer(e)}>
 
-              <label className="label">Type the answer below</label>
-              <input id="input-Answer "
+              <label htmlFor="input-Answer" className="label">Type the answer below</label>
+              <input id="input-Answer"
                 className="input-Answer"
                 type="text"
                 ref={input => this.textInput = input} />
@@ -117,7 +117,7 @@ export class Dashboard extends React.Component {
             </form>
           </div>
         </section >
-      </section >
+      </main >
     );
   }
 }

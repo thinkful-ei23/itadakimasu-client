@@ -101,8 +101,8 @@ export class Dashboard extends React.Component {
           <div className="dash-answer">
             <form className="dash-answer" onSubmit={(e) => this.submitAnswer(e)}>
 
-              <label className="label">Type the answer below</label>
-              <input id="input-Answer "
+              <label htmlFor="input-Answer" className="label">Type the answer below</label>
+              <input id="input-Answer"
                 className="input-Answer"
                 type="text"
                 ref={input => this.textInput = input} />

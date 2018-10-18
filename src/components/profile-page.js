@@ -49,10 +49,10 @@ export class Profile extends React.Component {
 			));
 
 			return (
-				<section className="profile">
+				<main className="profile">
 					<div>
 						<h2>Your Profile</h2>
-						<h3>UserName{this.props.username}</h3>
+						<h3>UserName: {this.props.username}</h3>
 						<h3>Today's Progress</h3>
 						<p className="results">{this.props.sessionCorrect}&nbsp;&nbsp;correct out of&nbsp;&nbsp;{this.props.sessionQuestionsAsked}</p>
 
@@ -70,7 +70,7 @@ export class Profile extends React.Component {
 						<Link to="/dashboard" className="btn-profile">back to the game</Link>
 					</button>
 
-				</section>
+				</main>
 
 			)
 		}

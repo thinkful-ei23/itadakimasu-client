@@ -47,7 +47,7 @@ export class Dashboard extends React.Component {
       this.props.dispatch(incrementCorrect());
 
       resQuestion = Object.assign({}, this.props.currentQuestion, {
-        memoryStr: this.props.currentQuestion.memoryStr*2
+        memoryStr: this.props.currentQuestion.memoryStr * 2
       });
     }
 
@@ -70,8 +70,8 @@ export class Dashboard extends React.Component {
 
     if (!this.props.currentQuestion) {
       return (
-        <div>
-          <img src="/img/gude_loading.png" alt="gudetama resting" />
+        <div className="loadPage" >
+          <img src="/img/gude_loading.png" alt="gudetama resting while the page is loading" />
         </div>
       );
     }

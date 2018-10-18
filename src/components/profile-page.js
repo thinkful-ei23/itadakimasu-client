@@ -16,8 +16,8 @@ export class Profile extends React.Component {
 
 		if (!this.props.userData) {
 			return (
-				<div>
-					<img src="/img/gude_loading.png" alt="gudetama resting" />
+				<div className="loadPage">
+					<img src="/img/gude_loading.png" alt="gudetama resting while the page is loading" />
 				</div>
 			);
 		} else {

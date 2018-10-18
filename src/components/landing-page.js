@@ -17,15 +17,17 @@ export function LandingPage(props) {
     }
 
     return (
-        <div className="home">
-            <p className="intro">Planning a trip to Japan? Itadakimasu is a quiz application that uses spaced repetition to teach you the names of common Japanese dishes. Start learning by signing up.</p>
-            <div className="btn-row">
-                <Link to="/login" className="btn-land btn-landL">LogIn</Link>
-                <Link to="/register" className="btn-land">Register</Link>
-            </div>
-            <div className="corner-pic" id="corner-pic"><img src="/img/resting.png" alt='Gudetama Resting' /></div>
-            {loggedOutMessage}
-        </div >
+        <main role="main">
+            <div className="home">
+                <p className="intro">Planning a trip to Japan? Itadakimasu is a quiz application that uses spaced repetition to teach you the names of common Japanese dishes. Start learning by signing up.</p>
+                <div className="btn-row">
+                    <Link to="/login" className="btn-land btn-landL">LogIn</Link>
+                    <Link to="/register" className="btn-land">Register</Link>
+                </div>
+                <div className="corner-pic" id="corner-pic"><img src="/img/resting.png" alt='Gudetama Resting' /></div>
+                {loggedOutMessage}
+            </div >
+        </main>
     );
 }
 

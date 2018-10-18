@@ -12,11 +12,13 @@ export function LogIn(props) {
         return <Redirect to="/dashboard" />;
     }
     return (
-        <div className="home-login">
-            <h2>Log in to Itadakimasu</h2>
-            <LoginForm />
-            <p className="reg_link">Don't have an account? Register <Link to="/register">here</Link></p>
-        </div>
+        <main role="main">
+            <div className="home-login">
+                <h2>Log in to Itadakimasu</h2>
+                <LoginForm />
+                <p className="reg_link">Don't have an account? Go to <Link to="/register">register page</Link></p>
+            </div>
+        </main>
     );
 }
 

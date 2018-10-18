@@ -14,7 +14,13 @@ Spaced repetition is a learning technique that has found mainstream success in a
 Check out the application [here](https://polar-dawn-64935.herokuapp.com/).
 
 ## Key Parts of Project
-The algorithm on the server side is implemented using a linked-list. (needs revision)
+At the core of this application is the spaced repetition algorithm. We've written our code so that as the user answers questions, we dynamically update the sequence of incoming questions to optomize their learning experience. Questions the user answers incorrectly appear more frequently. We hold off on displaying words the user has committed to memory. Implementation of this algorithm can be found in the server side repo:
+  /routes/question.js
+  
+  
+As the user answers questions, we thought it might be pragmatic to provide statistics about how they're progressing through the question set. For each session (login) we display the number of questions the user has correctly answered out of the total questions asked. We allow the user access to more detailed statistics on their profile page, where they can compare their current session's data against their overall progress, and view analytics for each specific question. The following code can be found in the client side repo:
+  /src/components/profile-page.js
+
 
 The server side code for this project is [here](https://github.com/thinkful-ei23/itadakimasu-server).
 

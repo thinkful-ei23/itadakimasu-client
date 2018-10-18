@@ -47,7 +47,9 @@ export class Dashboard extends React.Component {
       this.props.dispatch(incrementCorrect());
 
       resQuestion = Object.assign({}, this.props.currentQuestion, {
-        memoryStr: this.props.currentQuestion.memoryStr * 2
+        memoryStr: this.props.currentQuestion.memoryStr * 2,
+        attempts: this.props.currentQuestion.attempts + 1,
+        successes: this.props.currentQuestion.successes + 1
       });
     }
 
@@ -59,7 +61,8 @@ export class Dashboard extends React.Component {
       this.props.dispatch(incrementQuestions());
 
       resQuestion = Object.assign({}, this.props.currentQuestion, {
-        memoryStr: 1
+        memoryStr: 1,
+        attempts: this.props.currentQuestion.attempts + 1
       });
     }
     this.props.dispatch(postResult(resQuestion));
@@ -105,37 +108,37 @@ export class Dashboard extends React.Component {
                 ref={input => this.textInput = input}
               />
             </div>
-              <div className="dash">
-                <button
-                  className="btn-dash"
-                >Submit</button>
-              </div>
+            <div className="dash">
+              <button
+                className="btn-dash"
+              >Submit</button>
+            </div>
           </form>
 
-            <div className="dash">
-              <p className="results">{this.state.message}</p>
-            </div>
+          <div className="dash">
+            <p className="results">{this.state.message}</p>
+          </div>
 
-            <div className="dash">
-              <p className="results">{this.props.correct}&nbsp;&nbsp;correct out of&nbsp;&nbsp;{this.props.questionsAsked}</p>
-            </div>
+          <div className="dash">
+            <p className="results">{this.props.correct}&nbsp;&nbsp;correct out of&nbsp;&nbsp;{this.props.questionsAsked}</p>
+          </div>
 
-            {nextButton}
+          {nextButton}
         </section >
-        </section >
-        );
-      }
-    }
+      </section >
+    );
+  }
+}
 const mapStateToProps = state => {
-  const {currentUser} = state.auth;
+  const { currentUser } = state.auth;
   return {
-          username: state.auth.currentUser.username,
+    username: state.auth.currentUser.username,
     name: `${currentUser.firstName} ${currentUser.lastName}`,
-        currentQuestion: state.question.currentQuestion,
-        questionsAsked: state.question.questionsAsked,
-        correct: state.question.correct
-      };
-    };
+    currentQuestion: state.question.currentQuestion,
+    questionsAsked: state.question.questionsAsked,
+    correct: state.question.correct
+  };
+};
 
-    export default requiresLogin()(connect(mapStateToProps)(Dashboard));
+export default requiresLogin()(connect(mapStateToProps)(Dashboard));
 

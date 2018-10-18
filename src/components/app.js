@@ -7,6 +7,7 @@ import LandingPage from './landing-page';
 import Dashboard from './dashboard';
 import LogIn from './LogIn';
 import RegistrationPage from './registration-page';
+import Profile from './profile-page';
 import { refreshAuthToken } from '../actions/auth';
 // import { API_BASE_URL } from '../config';
 
@@ -48,6 +49,7 @@ export class App extends React.Component {
                 <Route exact path="/" component={LandingPage} />
                 <Route exact path="/register" component={RegistrationPage} />
                 <Route exact path="/login" component={LogIn} />
+                <Route exact path="/profile" component={Profile} />
             </div>
         );
     }

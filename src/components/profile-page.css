@@ -1,0 +1,33 @@
+body {
+	margin: 0;
+	padding: 1rem;
+	font-size: 2rem;
+
+}
+.results {
+	font-size: 2rem;
+	text-align: center;
+}
+.btn-profile {
+	max-width: 20rem;
+	padding: 1.5rem 1rem;
+	border-radius: 1rem;
+	background-color: #fff;
+	color: brown;
+	box-shadow: 0 .4rem .6rem 0 hsla(0, 0%, 0%, 0.2);
+	font-size: 2rem;
+	text-transform: uppercase;
+}
+.btn-profile:hover,
+.btn-profile:active {
+	background-color: brown;
+	color: #fff
+}
+.question-chart {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	color: green;
+
+}

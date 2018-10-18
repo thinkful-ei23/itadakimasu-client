@@ -89,13 +89,14 @@ export class Dashboard extends React.Component {
           Hello, {this.props.username}
         </div>
 
-        <section classsName="dash-input">
+        <section className="dash-input">
           <div className="dash dash-pic">
 
             <img className="image" src={this.props.currentQuestion.imageURL} alt="this drawing" />
             <p className="character">{this.props.currentQuestion.question}</p>
           </div>
           <form onSubmit={(e) => this.submitAnswer(e)}>
+
             <div className="dash-answer">
               <label className="label">Type the answer below</label>
               <input id="input-Answer "
@@ -104,37 +105,37 @@ export class Dashboard extends React.Component {
                 ref={input => this.textInput = input}
               />
             </div>
-            <div className="dash">
-              <button
-                className="btn-dash"
-              >Submit</button>
-            </div>
+              <div className="dash">
+                <button
+                  className="btn-dash"
+                >Submit</button>
+              </div>
           </form>
 
-          <div className="dash">
-            <p className="results">{this.state.message}</p>
-          </div>
+            <div className="dash">
+              <p className="results">{this.state.message}</p>
+            </div>
 
-          <div className="dash">
-            <p className="results">{this.props.correct}&nbsp;&nbsp;correct out of&nbsp;&nbsp;{this.props.questionsAsked}</p>
-          </div>
-          
-          {nextButton}
+            <div className="dash">
+              <p className="results">{this.props.correct}&nbsp;&nbsp;correct out of&nbsp;&nbsp;{this.props.questionsAsked}</p>
+            </div>
+
+            {nextButton}
         </section >
-      </section >
-    );
-  }
-}
+        </section >
+        );
+      }
+    }
 const mapStateToProps = state => {
-  const { currentUser } = state.auth;
+  const {currentUser} = state.auth;
   return {
-    username: state.auth.currentUser.username,
+          username: state.auth.currentUser.username,
     name: `${currentUser.firstName} ${currentUser.lastName}`,
-    currentQuestion: state.question.currentQuestion,
-    questionsAsked : state.question.questionsAsked,
-    correct: state.question.correct
-  };
-};
+        currentQuestion: state.question.currentQuestion,
+        questionsAsked: state.question.questionsAsked,
+        correct: state.question.correct
+      };
+    };
 
-export default requiresLogin()(connect(mapStateToProps)(Dashboard));
+    export default requiresLogin()(connect(mapStateToProps)(Dashboard));
 

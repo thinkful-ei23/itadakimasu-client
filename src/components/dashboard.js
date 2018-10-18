@@ -81,11 +81,10 @@ export class Dashboard extends React.Component {
     console.log(this.state.submitted);
     if (this.state.submitted) {
       nextButton =
-        <div className="dash">
+        <div >
           <button className="btn-dash" onClick={() => this.getNextQuestion()}>Next</button>
         </div>;
     }
-
     return (
       <section className="dashboard">
         <div className="dashboard-username">
@@ -93,36 +92,30 @@ export class Dashboard extends React.Component {
         </div>
 
         <section className="dash-input">
-          <div className="dash dash-pic">
+          <div className="dash-pic">
 
             <img className="image" src={this.props.currentQuestion.imageURL} alt="this drawing" />
             <p className="character">{this.props.currentQuestion.question}</p>
           </div>
-          <form onSubmit={(e) => this.submitAnswer(e)}>
-            <div className="dash-answer">
+
+          <div className="dash-answer">
+            <form className="dash-answer" onSubmit={(e) => this.submitAnswer(e)}>
+
               <label className="label">Type the answer below</label>
               <input id="input-Answer "
                 className="input-Answer"
                 type="text"
-                ref={input => this.textInput = input}
-              />
-            </div>
-            <div className="dash">
+                ref={input => this.textInput = input} />
               <button
                 className="btn-dash"
               >Submit</button>
-            </div>
-          </form>
-
-          <div className="dash">
-            <p className="results">{this.state.message}</p>
+              <div className="hidden" >
+                <p className="results">{this.state.message}</p>
+                <p className="results">{this.props.correct}&nbsp;&nbsp;correct out of&nbsp;&nbsp;{this.props.questionsAsked}</p>
+                {nextButton}
+              </div>
+            </form>
           </div>
-
-          <div className="dash">
-            <p className="results">{this.props.correct}&nbsp;&nbsp;correct out of&nbsp;&nbsp;{this.props.questionsAsked}</p>
-          </div>
-
-          {nextButton}
         </section >
       </section >
     );
@@ -134,7 +127,7 @@ const mapStateToProps = state => {
     username: state.auth.currentUser.username,
     name: `${currentUser.firstName} ${currentUser.lastName}`,
     currentQuestion: state.question.currentQuestion,
-    questionsAsked : state.question.questionsAsked,
+    questionsAsked: state.question.questionsAsked,
     correct: state.question.correct
   };
 };

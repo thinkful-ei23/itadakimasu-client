@@ -73,6 +73,42 @@ export const postResult = (result) => (dispatch, getState) => {
   });
 };
 
+export const FETCH_PROGRESS_REQUEST = 'FETCH_PROGRESS_REQUEST';
+export const fetchProgressRequest = () => ({
+  type: FETCH_PROGRESS_REQUEST
+});
+
+export const FETCH_PROGRESS_SUCCESS = 'FETCH_PROGRESS_SUCCESS';
+export const fetchProgressSuccess = (questions) => ({
+  type: FETCH_PROGRESS_SUCCESS,
+  questions
+});
+
+export const FETCH_PROGRESS_ERROR = 'FETCH_PROGRESS_ERROR';
+export const fetchProgressError = (error) => ({
+  type: FETCH_PROGRESS_ERROR,
+  error
+});
+
+export const fetchProgress = () => (dispatch, getState) => {
+  dispatch(fetchProgressRequest());
+  const authToken = getState().auth.authToken;
+  fetch(`${API_BASE_URL}/progress`, {
+    method: 'GET',
+    headers: {
+      Authorization: `Bearer ${authToken}`
+    }
+  })
+  .then(res => normalizeResponseErrors(res))
+  .then(res => res.json())
+  .then(questions => {
+    dispatch(fetchProgressSuccess(questions))
+  })
+  .catch(err => {
+    dispatch(fetchProgressError(err));
+  });
+};
+
 
 
 

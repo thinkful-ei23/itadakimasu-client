@@ -124,7 +124,7 @@ export class Dashboard extends React.Component {
           </div>
 
           <div className="dash">
-            <p className="results">{this.state.correct}&nbsp;&nbsp;correct out of&nbsp;{this.state.questionsAsked}</p>
+            <p className="results">{this.state.correct}&nbsp;&nbsp;correct out of&nbsp;&nbsp;{this.state.questionsAsked}</p>
 
           </div>
           {nextButton}

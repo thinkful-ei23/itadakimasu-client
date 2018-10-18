@@ -119,6 +119,11 @@ export const fetchProgress = () => (dispatch, getState) => {
   });
 };
 
+export const CLEAR_SESSION_DATA = 'CLEAR_SESSION_DATA';
+export const clearSessionData = () => ({
+  type: CLEAR_SESSION_DATA
+});
+
 
 
 

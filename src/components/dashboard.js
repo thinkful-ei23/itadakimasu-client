@@ -93,6 +93,7 @@ export class Dashboard extends React.Component {
 
         <section className="dash-input">
           <div className="dash-pic">
+
             <img className="image" src={this.props.currentQuestion.imageURL} alt="this drawing" />
             <p className="character">{this.props.currentQuestion.question}</p>
           </div>

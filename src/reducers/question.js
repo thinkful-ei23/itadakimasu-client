@@ -9,7 +9,8 @@ import {
   FETCH_PROGRESS_ERROR,
   FETCH_PROGRESS_SUCCESS,
   INCREMENT_CORRECT,
-  INCREMENT_QUESTIONS
+  INCREMENT_QUESTIONS,
+  CLEAR_SESSION_DATA
 } from '../actions/question';
 
 const initialState = {
@@ -85,6 +86,10 @@ export default function reducer(state = initialState, action) {
   else if (action.type === INCREMENT_QUESTIONS) {
     let newCount = state.questionsAsked + 1;
     return {...state, questionsAsked: newCount};
+  }
+
+  else if (action.type === CLEAR_SESSION_DATA) {
+    return initialState;
   }
   
 	return state;

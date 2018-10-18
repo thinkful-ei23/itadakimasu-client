@@ -13,6 +13,20 @@ export class Profile extends React.Component {
 		this.props.dispatch(fetchProgress())
 	}
 
+	calculateAllSucceses() {
+		const allSuccesses = this.props.userData.reduce((acc, question) => {
+			return acc + question.successes;
+		}, 0);
+		return allSuccesses;
+	}
+
+	calculateAllQuestionsAsked() {
+		const allQuestionsAsked = this.props.userData.reduce((acc, question) => {
+			return acc + question.attempts;
+		}, 0);
+		return allQuestionsAsked;
+	}
+
 	render() {
 
 		if (!this.props.userData) {
@@ -22,6 +36,11 @@ export class Profile extends React.Component {
 				</div>
 			);
 		} else {
+			let allSuccessses = 0;
+			allSuccessses = this.calculateAllSucceses();
+			let allQuestionsAsked = 0;
+			allQuestionsAsked = this.calculateAllQuestionsAsked();
+			
 			const userData = this.props.userData.map(question => (
 				<li key={question.index}>
 					<h3>Question {question.index}</h3>
@@ -36,10 +55,10 @@ export class Profile extends React.Component {
 						<h2>Your Profile</h2>
 						<h3>UserName{this.props.username}</h3>
 						<h3>Today's Progress</h3>
-						<p className="results">{this.state.correct}&nbsp;&nbsp;correct out of&nbsp;&nbsp;{this.state.questionsAsked}</p>
+						<p className="results">{this.props.sessionCorrect}&nbsp;&nbsp;correct out of&nbsp;&nbsp;{this.props.sessionQuestionsAsked}</p>
 
 						<h3>Overall Progress</h3>
-						<p className="results">{this.state.AllCorrect}&nbsp;&nbsp;correct out of&nbsp;&nbsp;{this.state.AllQuestionsAsked}</p>
+						<p className="results">{allSuccessses}&nbsp;&nbsp;correct out of&nbsp;&nbsp;{allQuestionsAsked}</p>
 					</div>
 					<div className="question-chart">
 						<h3>Question Progress</h3>
@@ -60,6 +79,8 @@ export class Profile extends React.Component {
 }
 
 const mapStateToProps = state => ({
-	userData: state.question.userData
+	userData: state.question.userData,
+	sessionQuestionsAsked: state.question.questionsAsked,
+	sessionCorrect: state.question.correct 
 });
 export default requiresLogin()(connect(mapStateToProps)(Profile));

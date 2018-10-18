@@ -6,6 +6,8 @@ import {
   POST_RESULT_SUCCESS,
   POST_RESULT_ERROR,
   FETCH_PROGRESS_REQUEST,
+  FETCH_PROGRESS_ERROR,
+  FETCH_PROGRESS_SUCCESS
 } from '../actions/question';
 
 const initialState = {
@@ -59,14 +61,14 @@ export default function reducer(state = initialState, action) {
     });
   }
 
-  else if (action.type === FETCH_QUESTION_SUCCESS) {
+  else if (action.type === FETCH_PROGRESS_SUCCESS) {
     return Object.assign({}, state, {
       loading: false,
       userData: action.questions
     });
   }
 
-  else if (action.type === FETCH_QUESTION_ERROR) {
+  else if (action.type === FETCH_PROGRESS_ERROR) {
     return Object.assign({}, state, {
       loading: false,
       error: action.error

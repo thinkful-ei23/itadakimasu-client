@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import requiresLogin from './requires-login';
 
 import { fetchProgress } from '../actions/question';
 import './profile-page.css'
@@ -61,4 +62,4 @@ export class Profile extends React.Component {
 const mapStateToProps = state => ({
 	userData: state.question.userData
 });
-export default connect(mapStateToProps)(Profile);
+export default requiresLogin()(connect(mapStateToProps)(Profile));

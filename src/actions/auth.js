@@ -33,6 +33,16 @@ export const authError = error => ({
     error
 });
 
+export const SET_LOGGED_OUT = 'SET_LOGGED_OUT';
+export const setLoggedOut = () => ({
+    type: SET_LOGGED_OUT,
+});
+
+export const CLEAR_LOGGED_OUT = 'CLEAR_LOGGED_OUT';
+export const clearLoggedOut = () => ({
+    type: CLEAR_LOGGED_OUT,
+});
+
 // Stores the auth token in state and localStorage, and decodes and stores
 // the user data stored in the token
 const storeAuthInfo = (authToken, dispatch) => {

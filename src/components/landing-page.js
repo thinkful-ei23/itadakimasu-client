@@ -2,11 +2,18 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link, Redirect } from 'react-router-dom';
 import './landing.css';
+import { clearLoggedOut } from '../actions/auth';
 
 export function LandingPage(props) {
     // If we are logged in redirect straight to the user's dashboard
     if (props.loggedIn) {
         return <Redirect to="/dashboard" />;
+    }
+    let loggedOutMessage;
+    if (props.loggedOut) {
+        const pStyle = {fontSize: 20}
+        loggedOutMessage = <p style={pStyle}>You have successfully logged out</p>;
+        setTimeout(() => props.dispatch(clearLoggedOut()), 4000);
     }
 
     return (
@@ -18,12 +25,14 @@ export function LandingPage(props) {
 
                 <div className="corner-pic" id="corner-pic"><img url="/img/resting.png" alt='Gudetama Resting'/></div>
             </div>
+            {loggedOutMessage}
         </div>
     );
 }
 
 const mapStateToProps = state => ({
-    loggedIn: state.auth.currentUser !== null
+    loggedIn: state.auth.currentUser !== null,
+    loggedOut: state.auth.loggedOut
 });
 
 export default connect(mapStateToProps)(LandingPage);

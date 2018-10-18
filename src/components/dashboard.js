@@ -47,7 +47,9 @@ export class Dashboard extends React.Component {
       this.props.dispatch(incrementCorrect());
 
       resQuestion = Object.assign({}, this.props.currentQuestion, {
-        memoryStr: this.props.currentQuestion.memoryStr * 2
+        memoryStr: this.props.currentQuestion.memoryStr * 2,
+        attempts: this.props.currentQuestion.attempts + 1,
+        successes: this.props.currentQuestion.successes + 1
       });
     }
 
@@ -59,7 +61,8 @@ export class Dashboard extends React.Component {
       this.props.dispatch(incrementQuestions());
 
       resQuestion = Object.assign({}, this.props.currentQuestion, {
-        memoryStr: 1
+        memoryStr: 1,
+        attempts: this.props.currentQuestion.attempts + 1
       });
     }
     this.props.dispatch(postResult(resQuestion));

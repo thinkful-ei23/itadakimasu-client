@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import requiresLogin from './requires-login';
-import { fetchQuestion, postResult } from '../actions/question';
+import { fetchQuestion, postResult, incrementQuestions, incrementCorrect } from '../actions/question';
 import './dashboard.css';
 
 export class Dashboard extends React.Component {
@@ -9,9 +9,7 @@ export class Dashboard extends React.Component {
     super(props);
     this.state = {
       submitted: false,
-      message: '',
-      questionsAsked: 0,
-      correct: 0
+      message: ''
     }
   }
 
@@ -45,12 +43,8 @@ export class Dashboard extends React.Component {
       this.setState({
         message
       });
-      this.setState({
-        questionsAsked: this.state.questionsAsked + 1
-      });
-      this.setState({
-        correct: this.state.correct + 1
-      });
+      this.props.dispatch(incrementQuestions());
+      this.props.dispatch(incrementCorrect());
 
       resQuestion = Object.assign({}, this.props.currentQuestion, {
         memoryStr: this.props.currentQuestion.memoryStr * 2
@@ -62,9 +56,7 @@ export class Dashboard extends React.Component {
       this.setState({
         message
       });
-      this.setState({
-        questionsAsked: this.state.questionsAsked + 1
-      });
+      this.props.dispatch(incrementQuestions());
 
       resQuestion = Object.assign({}, this.props.currentQuestion, {
         memoryStr: 1
@@ -124,9 +116,9 @@ export class Dashboard extends React.Component {
           </div>
 
           <div className="dash">
-            <p className="results">{this.state.correct}&nbsp;&nbsp;correct out of&nbsp;&nbsp;{this.state.questionsAsked}</p>
-
+            <p className="results">{this.props.correct}&nbsp;&nbsp;correct out of&nbsp;&nbsp;{this.props.questionsAsked}</p>
           </div>
+          
           {nextButton}
         </section >
       </section >
@@ -138,7 +130,9 @@ const mapStateToProps = state => {
   return {
     username: state.auth.currentUser.username,
     name: `${currentUser.firstName} ${currentUser.lastName}`,
-    currentQuestion: state.question.currentQuestion
+    currentQuestion: state.question.currentQuestion,
+    questionsAsked : state.question.questionsAsked,
+    correct: state.question.correct
   };
 };
 

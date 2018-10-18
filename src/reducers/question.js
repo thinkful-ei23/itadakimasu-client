@@ -7,14 +7,18 @@ import {
   POST_RESULT_ERROR,
   FETCH_PROGRESS_REQUEST,
   FETCH_PROGRESS_ERROR,
-  FETCH_PROGRESS_SUCCESS
+  FETCH_PROGRESS_SUCCESS,
+  INCREMENT_CORRECT,
+  INCREMENT_QUESTIONS
 } from '../actions/question';
 
 const initialState = {
   currentQuestion: null,
   userData: null,
 	loading: false,
-	error: null
+  error: null,
+  questionsAsked: 0,
+  correct: 0
 };
 
 export default function reducer(state = initialState, action) {
@@ -73,6 +77,14 @@ export default function reducer(state = initialState, action) {
       loading: false,
       error: action.error
     });
+  }
+  else if (action.type === INCREMENT_CORRECT) {
+    let newCount = state.correct + 1;
+    return {...state, correct: newCount};
+  }
+  else if (action.type === INCREMENT_QUESTIONS) {
+    let newCount = state.questionsAsked + 1;
+    return {...state, questionsAsked: newCount};
   }
   
 	return state;

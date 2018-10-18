@@ -52,6 +52,16 @@ export const postResultError = (error) => ({
   error
 });
 
+export const INCREMENT_QUESTIONS = 'INCREMENT_QUESTIONS ';
+export const incrementQuestions = () => ({
+  type: INCREMENT_QUESTIONS ,
+});
+
+export const INCREMENT_CORRECT = 'INCREMENT_CORRECT';
+export const incrementCorrect = () => ({
+  type: INCREMENT_CORRECT,
+});
+
 export const postResult = (result) => (dispatch, getState) => {
   dispatch(postResultRequest());
   const authToken = getState().auth.authToken;

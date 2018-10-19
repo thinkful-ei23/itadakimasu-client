@@ -32,7 +32,6 @@ export class Dashboard extends React.Component {
   submitAnswer(e) {
     e.preventDefault();
     document.getElementById('game-submit').disabled = true;
-    console.log('submitAnswer ran!');
     const answer = this.textInput.value;
     this.setState({
       submitted: true
@@ -80,7 +79,6 @@ export class Dashboard extends React.Component {
         </div>
       );
     }
-    console.log(this.state.submitted);
     if (this.state.submitted) {
       nextButton =
         <div >

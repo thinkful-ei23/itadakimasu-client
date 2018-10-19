@@ -81,9 +81,7 @@ export class Dashboard extends React.Component {
     }
     if (this.state.submitted) {
       nextButton =
-        <div >
           <button className="btn-dash" onClick={() => this.getNextQuestion()}>Next</button>
-        </div>;
     }
     return (
       <main aria-live="polite" role="main" className="dashboard">
@@ -110,7 +108,9 @@ export class Dashboard extends React.Component {
               <div className="hidden" >
                 <p className="results">{this.state.message}</p>
                 <p className="results">{this.props.correct}&nbsp;&nbsp;correct out of&nbsp;&nbsp;{this.props.questionsAsked}</p>
+                <div className="textCentered">
                 {nextButton}
+                </div>
               </div>
             </form>
           </div>

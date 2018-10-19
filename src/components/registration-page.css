@@ -8,6 +8,7 @@
 	justify-content: center;
 	padding: 1rem;
 	height: 100vh;
+	padding-top: 40px;
 }
 .home-reg-title {
 	font-size: 3rem;
@@ -15,7 +16,7 @@
 	text-align: center;
 }
 #bottom {
-font-size: 1.3rem;
+font-size: 2rem;
 color: #000;
 align-self: center;
 }

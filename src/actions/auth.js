@@ -72,7 +72,6 @@ export const login = (username, password) => dispatch => {
             .then(({authToken}) => storeAuthInfo(authToken, dispatch))
             .catch(err => {
                 const {reason, message, location} = err;
-                console.log(err);
                 if (reason === 'AuthenticationError' || reason === 'ValidationError') {
                 // Convert ValidationErrors into SubmissionErrors for Redux Form
                     return Promise.reject(

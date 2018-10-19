@@ -22,12 +22,21 @@ export class RegistrationForm extends React.Component {
     }
 
     render() {
+        let error;
+        if (this.props.error) {
+            error = (
+                <div className="form-error" aria-live="polite">
+                    {this.props.error}
+                </div>
+            );
+        }
         return (
             <form
                 className="login-reg"
                 onSubmit={this.props.handleSubmit(values =>
                     this.onSubmit(values)
                 )}>
+                {error}
                 <label htmlFor="firstName" className="label-login">First name</label>
                 <Field component={Input} type="text" name="firstName" label="First name"
                     class="label-login"/>

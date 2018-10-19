@@ -92,11 +92,10 @@ export class Dashboard extends React.Component {
         <div className="dashboard-username">
           Hello, {this.props.username}
         </div>
-
         <section className="dash-input">
           <div className="dash-pic">
 
-            <img className="image" src={this.props.currentQuestion.imageURL} alt="this drawing" />
+            <img className="image" src={this.props.currentQuestion.imageURL} alt={this.props.currentQuestion.imageDescription} />
             <p className="character">{this.props.currentQuestion.question}</p>
           </div>
 

@@ -83,7 +83,7 @@ export const login = (username, password) => dispatch => {
                 }
                 return Promise.reject(
                     new SubmissionError({
-                        _error: 'Error submitting message'
+                        _error: 'Your credentials are not correct'
                     })
                 );
             })

@@ -18,12 +18,12 @@ export class HeaderBar extends React.Component {
         // Only render the log out button if we are logged in
         let logOutButton;
         let profileLink;
-        const inlineBlock = {display : "inline-block"}; // get rid of this later
+        const inlineBlock = { display: "inline-block" }; // get rid of this later
         if (this.props.loggedIn) {
             logOutButton = (
                 <button className="btn-out" onClick={() => this.logOut()}>Log out</button>
             );
-            profileLink = <li style={inlineBlock}><Link to="/profile" className="link"><h2>Your profile!</h2></Link></li>;
+            profileLink = <li className="link-profile" style={inlineBlock}><Link to="/profile" className="link"><h2>Check your progress!</h2></Link></li>;
         }
         // inside nav should be ul, li's - don't want to mess up the css
         return (

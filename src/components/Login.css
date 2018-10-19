@@ -1,16 +1,15 @@
 .home-login {
 	background-image: linear-gradient(to right, rgba(245, 245, 245, 0.8), rgba(245, 245, 245, 0.8)), url("/img/gudetama_wallpaper.jpeg");
-/* background-image: url("/img/gudetama_wallpaper.jpeg"); */
-background-repeat: round ;
-background-size: auto;
-display: flex;
-flex-direction: column;
-flex-wrap: wrap;
-justify-content: center;
-padding: 1rem;
-height: 100vh;
+	background-repeat: round ;
+	background-size: auto;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	padding: 9rem;
+	height: 100vh;
 }
-.home-login h2 {
+.home-login-title {
 	font-size: 3rem;
 	color: #000;
 	text-align: center;

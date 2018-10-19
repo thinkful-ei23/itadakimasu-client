@@ -86,7 +86,11 @@ input[type=text] {
 	background-color: brown;
 	color: #fff
 }
+.btn-dash:disabled {
+	background-color: #fff;
+	color:#ddd;
 
+}
 .loadPage {
 	background-color: #FEDD15;
 	display: flex;

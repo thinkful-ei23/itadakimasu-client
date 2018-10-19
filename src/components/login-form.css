@@ -3,7 +3,6 @@ display: flex;
 flex-direction: column;
 flex-wrap: wrap;
 align-items: center;
-
 }
 .label-login {
 	font-size: 2rem;

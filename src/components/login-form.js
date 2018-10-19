@@ -22,7 +22,6 @@ export class LoginForm extends React.Component {
         return (
             <section className="login-form">
                 <form
-                    // className="login-form"
                     onSubmit={this.props.handleSubmit(values =>
                         this.onSubmit(values)
                     )}>
@@ -50,10 +49,10 @@ export class LoginForm extends React.Component {
                         label="Password"
                     />
                     <div className="btn-div">
-                    <button className="btn-sub" disabled={this.props.pristine || this.props.submitting}>
-                        Log in
+                        <button className="btn-sub" disabled={this.props.pristine || this.props.submitting}>
+                            Log in
                 </button>
-                </div>
+                    </div>
                 </form>
             </section>
         );

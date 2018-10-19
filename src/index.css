@@ -18,10 +18,13 @@ body {
 @media only screen and (max-width: 750px) {
 }
 @media only screen and (max-width: 630px) {
+    font-size: 50%;
 }
 @media only screen and (max-width: 520px) {
+    font-size: 40%;
+
 }
-@media only screen and (max-width: 360px) {
-}
+/* @media only screen and (max-width: 360px) { */
+/* } */
 @media only screen and (max-width: 340px) {
 }

@@ -41,7 +41,7 @@ export class Dashboard extends React.Component {
     let resQuestion
 
     if (answer.toLowerCase() === this.props.currentQuestion.answer) {
-      const message = 'You`re correct!';
+      const message = "You're correct!";
       this.setState({
         message
       });
@@ -56,7 +56,7 @@ export class Dashboard extends React.Component {
     }
 
     else {
-      const message = `Sorry, the correct answer is ${this.props.currentQuestion.answer}`;
+      const message = `Sorry,  the correct answer is ${this.props.currentQuestion.answer}`;
       this.setState({
         message
       });

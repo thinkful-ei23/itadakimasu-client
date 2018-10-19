@@ -16,6 +16,13 @@ h1 {
 .link {
 	text-decoration: none;
 }
+.link-profile {
+	padding: .5rem;
+	color: #F5B43D;
+	background-color: #ddd;
+	border-radius: 1rem;
+	box-shadow: 0 .4rem .6rem 0 hsla(0, 0%, 0%, 0.2);
+}
 .btn-out {
 	margin-top: 2rem;
 	max-width: 20rem;
@@ -25,9 +32,7 @@ h1 {
 	color: brown;
 	box-shadow: 0 .4rem .6rem 0 hsla(0, 0%, 0%, 0.2);
 	font-size: 1.5rem;
-	/* TODO font size 2 in others */
 	text-transform: uppercase;
-/* TODO height andline-height ? */
 	height: 4rem;
 	line-height: 1rem;
 }

@@ -42,10 +42,10 @@ export class Profile extends React.Component {
 			allQuestionsAsked = this.calculateAllQuestionsAsked();
 
 			const userData = this.props.userData.map(question => (
-				<li key={question.index}>
-					<h3>Question: {question.question}</h3>
-					<p>You've got this question right {question.successes} times out of {question.attempts}</p>
-				</li>
+				<tr key={question.index}>
+					<th>Question: {question.question}</th>
+					<td> {question.successes} correct out of {question.attempts}</td>
+				</tr>
 			));
 
 			return (
@@ -53,23 +53,28 @@ export class Profile extends React.Component {
 					<div>
 						<h2>Your Profile</h2>
 						<h3>UserName: {this.props.username}</h3>
-						<h3>Today's Progress</h3>
-						<p className="results">{this.props.sessionCorrect}&nbsp;&nbsp;correct out of&nbsp;&nbsp;{this.props.sessionQuestionsAsked}</p>
 
-						<h3>Overall Progress</h3>
-						<p className="results">{allSuccessses}&nbsp;&nbsp;correct out of&nbsp;&nbsp;{allQuestionsAsked}</p>
+						<div className="top-progress">
+							<h3>Today's Progress</h3>
+							<p className="results">{this.props.sessionCorrect}&nbsp;&nbsp;correct out of&nbsp;&nbsp;{this.props.sessionQuestionsAsked}</p>
+						</div>
+						<div className="top-progress">
+							<h3>Overall Progress</h3>
+							<p className="results">{allSuccessses}&nbsp;&nbsp;correct out of&nbsp;&nbsp;{allQuestionsAsked}</p>
+						</div>
 					</div>
+
 					<div className="question-chart">
-						<h3>Question Progress</h3>
-						<ul>
+						<h4>Question Progress</h4>
+						<table>
 							{userData}
-						</ul>
+						</table>
 					</div>
-
-					<button className="btn-profile" >
-						<Link to="/dashboard" className="btn-profile">back to the game</Link>
-					</button>
-
+					<div className="btn-bottom">
+						<button className="btn-profile" >
+							<Link to="/dashboard" className="btn-link">back to the game</Link>
+						</button>
+					</div>
 				</main>
 
 			)
@@ -80,6 +85,6 @@ export class Profile extends React.Component {
 const mapStateToProps = state => ({
 	userData: state.question.userData,
 	sessionQuestionsAsked: state.question.questionsAsked,
-	sessionCorrect: state.question.correct 
+	sessionCorrect: state.question.correct
 });
 export default requiresLogin()(connect(mapStateToProps)(Profile));

@@ -20,18 +20,13 @@
 	flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: center;
-	border: 1rem dashed orange;
 }
-.dash {
-	border: 1rem solid green;
-}
+
 .dash-answer{
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	/* align-items: space-between; */
-	border: 1rem dotted rebeccapurple;
 }
 .dash-form{
 	border: .5rem solid black;

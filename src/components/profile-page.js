@@ -49,7 +49,7 @@ export class Profile extends React.Component {
 			));
 
 			return (
-				<main className="profile">
+				<main role="main" className="profile">
 					<div>
 						<h2>Your Profile</h2>
 						<h3>UserName: {this.props.username}</h3>

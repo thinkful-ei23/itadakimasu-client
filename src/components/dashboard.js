@@ -76,7 +76,7 @@ export class Dashboard extends React.Component {
     if (!this.props.currentQuestion) {
       return (
         <div className="loadPage" >
-          <img src="/img/gude_loading.png" alt="gudetama resting while the page is loading" />
+          <img aria-live="polite" src="/img/gude_loading.png" alt="gudetama resting while the page is loading" />
         </div>
       );
     }
@@ -88,13 +88,12 @@ export class Dashboard extends React.Component {
         </div>;
     }
     return (
-      <main className="dashboard">
+      <main aria-live="polite" role="main" className="dashboard">
         <div className="dashboard-username">
           Hello, {this.props.username}
         </div>
         <section className="dash-input">
           <div className="dash-pic">
-
             <img className="image" src={this.props.currentQuestion.imageURL} alt={this.props.currentQuestion.imageDescription} />
             <p className="character">{this.props.currentQuestion.question}</p>
           </div>
@@ -122,6 +121,7 @@ export class Dashboard extends React.Component {
     );
   }
 }
+
 const mapStateToProps = state => {
   const { currentUser } = state.auth;
   return {

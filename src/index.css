@@ -15,16 +15,28 @@ body {
     box-sizing: border-box;
 }
 
-@media only screen and (max-width: 750px) {
-}
-@media only screen and (max-width: 630px) {
-    font-size: 50%;
-}
-@media only screen and (max-width: 520px) {
-    font-size: 40%;
 
+ @media only screen and (max-width: 600px) {
+
+    #corner-pic img{
+        max-width: 40%;
+        }
 }
-/* @media only screen and (max-width: 360px) { */
-/* } */
-@media only screen and (max-width: 340px) {
+
+@media only screen and (max-width: 550px) {
+
+    #corner-pic img{
+        max-width: 30%;
+        }
+}
+
+@media only screen and (max-width: 450px) {
+    #corner-pic img{
+        max-width: 20%;
+        }
+}
+@media only screen and (max-width: 330px) {
+    #corner-pic img{
+        max-width: 15%;
+        }
 }

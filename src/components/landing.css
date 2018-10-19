@@ -15,11 +15,12 @@
 }
 
 #corner-pic img {
-	width: 60rem
+	max-width: 50%;
+	height: auto;
 }
+
 .intro {
 	text-align: justify;
-	
 	margin: 0 4rem;
 	border: .1rem solid #000;
 	font-size: 2rem;
@@ -56,4 +57,19 @@
 	color: #fff;
 	border: transparent;
 }
-
+/* @media only screen and (max-width: 7200px) {
+	#corner-pic img {
+		width: 50rem
+	}
+	font-size: 55%;
+}
+@media only screen and (max-width: 560px) {
+	#corner-pic img {
+		width: 40rem
+	}
+}
+@media only screen and (max-width: 340px) {
+	#corner-pic img {
+		width: 30rem
+	}
+} */

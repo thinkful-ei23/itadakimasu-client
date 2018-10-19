@@ -47,12 +47,13 @@ export class Profile extends React.Component {
 					<td> {question.successes} correct out of {question.attempts}</td>
 				</tr>
 			));
+			console.log(this.props.u)
 
 			return (
 				<main role="main" className="profile">
 					<div>
 						<h2>Your Profile</h2>
-						<h3>UserName: {this.props.username}</h3>
+						<h3>UserName: {this.props.user.username}</h3>
 
 						<div className="top-progress">
 							<h3>Today's Progress</h3>
@@ -83,6 +84,7 @@ export class Profile extends React.Component {
 }
 
 const mapStateToProps = state => ({
+	user: state.auth.currentUser,
 	userData: state.question.userData,
 	sessionQuestionsAsked: state.question.questionsAsked,
 	sessionCorrect: state.question.correct

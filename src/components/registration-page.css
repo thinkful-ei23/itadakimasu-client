@@ -5,10 +5,9 @@
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
-	justify-content: center;
-	padding: 1rem;
+	justify-content: flex-start;
+	padding: 5rem;
 	height: 100vh;
-	padding-top: 40px;
 }
 .home-reg-title {
 	font-size: 3rem;

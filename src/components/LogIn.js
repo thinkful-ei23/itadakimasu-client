@@ -13,9 +13,8 @@ export function LogIn(props) {
     }
     return (
         <main role="main">
-
-            <div className="home-reg">
-                <h2 className="home-reg-title">Log in</h2>
+            <div className="home-login">
+                <h2 className="home-login-title">Log in</h2>
                 <LoginForm />
                 <p className="reg_link">Don't have an account? Go to <Link to="/register">registration page</Link></p>
             </div>

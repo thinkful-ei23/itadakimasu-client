@@ -1,14 +1,12 @@
 .home-reg {
 	background-image: linear-gradient(to right, rgba(245, 245, 245, 0.8), rgba(245, 245, 245, 0.8)), url("/img/gudetama_wallpaper.jpeg");
-/* background-image: url("/img/gudetama_wallpaper.jpeg"); */
 	background-repeat: round ;
 	background-size: auto;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
-	/* justify-content: center; */
 	padding: 1rem;
-	/* opacity: .9; */
+	height: 100vh;
 }
 .home-reg-title {
 	font-size: 3rem;

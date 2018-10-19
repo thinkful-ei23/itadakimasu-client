@@ -16,6 +16,9 @@
 	font-size: 2.5rem;
 	margin-bottom: 2rem;
 }
+.textCentered {
+	text-align: center;
+}
 .dash-input {
 	display: flex;
 	flex-direction: column;
@@ -64,6 +67,9 @@ input[type=text] {
 	background-color: #fff;
 	border-radius: 1rem;
 	margin-bottom: 2rem;
+	max-width: 50vh;
+	margin-right: auto;
+	margin-left: auto;
 }
 .results {
 	font-size: 2rem;

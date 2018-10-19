@@ -23,7 +23,7 @@ export class HeaderBar extends React.Component {
             logOutButton = (
                 <button className="btn-out" onClick={() => this.logOut()}>Log out</button>
             );
-            profileLink = <li className="link-profile" style={inlineBlock}><Link to="/profile" className="link"><h2>Check your progress!</h2></Link></li>;
+            profileLink = <li className="link-profile" style={inlineBlock}><Link to="/profile" className="link progress-link"><h2>Your progress</h2></Link></li>;
         }
         // inside nav should be ul, li's - don't want to mess up the css
         return (

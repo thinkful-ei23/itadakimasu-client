@@ -18,15 +18,12 @@
 	width: 60rem
 }
 .intro {
-	text-align: center;
+	text-align: justify;
+	
 	margin: 0 4rem;
 	border: .1rem solid #000;
-<<<<<<< HEAD
-
-=======
 	font-size: 2rem;
 	line-height: 2rem;
->>>>>>> b8f238dd05e173e6ebb65505b3b4aee77b1a6ecb
 	padding: 3rem;
 	background-color: rgba(250, 250, 250, 0.6);
 	color: #F5B43D;

@@ -50,10 +50,10 @@ export class LoginForm extends React.Component {
                         label="Password"
                     />
                     <div className="btn-div">
-                    <button className="btn-sub" disabled={this.props.pristine || this.props.submitting}>
-                        Log in
+                        <button className="btn-sub" disabled={this.props.pristine || this.props.submitting}>
+                            Log in
                 </button>
-                </div>
+                    </div>
                 </form>
             </section>
         );

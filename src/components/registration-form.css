@@ -31,3 +31,7 @@
 		color: #fff;
 		border: transparent;
 	}
+
+	.form-error {
+		font-size: 1.5rem;
+	}

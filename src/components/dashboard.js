@@ -24,12 +24,14 @@ export class Dashboard extends React.Component {
   }
 
   getNextQuestion() {
-    this.props.dispatch(fetchQuestion());
+    this.props.dispatch(fetchQuestion())
+    document.getElementById('game-submit').disabled = false;
     this.clearValues();
   }
 
   submitAnswer(e) {
     e.preventDefault();
+    document.getElementById('game-submit').disabled = true;
     console.log('submitAnswer ran!');
     const answer = this.textInput.value;
     this.setState({
@@ -106,7 +108,7 @@ export class Dashboard extends React.Component {
                 className="input-Answer"
                 type="text"
                 ref={input => this.textInput = input} />
-              <button
+              <button id="game-submit"
                 className="btn-dash"
               >Submit</button>
               <div className="hidden" >

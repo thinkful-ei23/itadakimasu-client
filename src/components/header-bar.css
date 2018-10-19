@@ -24,6 +24,7 @@ h1 {
 	box-shadow: 0 .4rem .6rem 0 hsla(0, 0%, 0%, 0.2);
 }
 .btn-out {
+	font-family: "Lato", sans-serif;
 	margin-top: 2rem;
 	max-width: 20rem;
 	padding: 1.5rem 1rem;
@@ -45,4 +46,10 @@ h1 {
 
 .progress-link {
 	color: brown;
+}
+
+.childNav {
+	margin-right: 4em;
+	margin-left: 4em;
+	display: inline-block;
 }

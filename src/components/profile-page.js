@@ -51,7 +51,7 @@ export class Profile extends React.Component {
 
 			return (
 				<main role="main" className="profile">
-					<div>
+					<div className="profile-padding">
 						<h2>Your Profile</h2>
 						<h3>UserName: {this.props.user.username}</h3>
 

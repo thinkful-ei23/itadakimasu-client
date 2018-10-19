@@ -7,6 +7,9 @@ color: #001;
 	position: relative;
 	height: 100vh;
 }
+.profile-padding {
+	padding: 2.5em;
+}
 .profile::after {
   content: "";
 	background: url("/img/Mt_Fuji.jpg");

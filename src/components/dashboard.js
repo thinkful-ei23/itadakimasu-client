@@ -55,7 +55,7 @@ export class Dashboard extends React.Component {
     }
 
     else {
-      const message = `Sorry,  the correct answer is ${this.props.currentQuestion.answer}`;
+      const message = `Sorry, the correct answer is ${this.props.currentQuestion.answer}`;
       this.setState({
         message
       });
@@ -106,7 +106,7 @@ export class Dashboard extends React.Component {
                 className="btn-dash"
               >Submit</button>
               <div className="hidden" >
-                <p className="results">{this.state.message}</p>
+                <div className="limit"><p className="results">{this.state.message}</p></div>
                 <p className="results">{this.props.correct}&nbsp;&nbsp;correct out of&nbsp;&nbsp;{this.props.questionsAsked}</p>
                 <div className="textCentered">
                 {nextButton}

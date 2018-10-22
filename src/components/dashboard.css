@@ -74,7 +74,9 @@ input[type=text] {
 .results {
 	font-size: 2rem;
 	text-align: center;
+	overflow-wrap: break-word;
 }
+
 .btn-dash {
 	max-width: 20rem;
 	padding: 1.5rem 5rem;
@@ -108,6 +110,6 @@ input[type=text] {
 
 @media only screen and (max-width: 630px) {
 	.image {
-		width: 90%;
+		width: 80%;
 	}
 }

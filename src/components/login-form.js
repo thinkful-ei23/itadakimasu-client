@@ -20,8 +20,7 @@ export class LoginForm extends React.Component {
             );
         }
         return (
-            <section className="login-form">
-                <form
+                <form className="login-reg"
                     onSubmit={this.props.handleSubmit(values =>
                         this.onSubmit(values)
                     )}>
@@ -54,7 +53,6 @@ export class LoginForm extends React.Component {
                         </button>
                     </div>
                 </form>
-            </section>
         );
     }
 }

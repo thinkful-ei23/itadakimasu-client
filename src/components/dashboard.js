@@ -92,7 +92,7 @@ export class Dashboard extends React.Component {
             <img className="image" src={this.props.currentQuestion.imageURL} alt={this.props.currentQuestion.imageDescription} />
             <p className="character">{this.props.currentQuestion.question}</p>
           </div>
-
+          <section>
           <div className="dash-answer">
             <form className="dash-answer" onSubmit={(e) => this.submitAnswer(e)}>
 
@@ -113,6 +113,7 @@ export class Dashboard extends React.Component {
               </div>
             </form>
           </div>
+          </section>
       </main >
     );
   }

@@ -39,6 +39,7 @@ export class HeaderBar extends React.Component {
         );
     }
 }
+//
 
 const mapStateToProps = state => ({
     loggedIn: state.auth.currentUser !== null

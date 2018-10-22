@@ -90,3 +90,9 @@ th, td {
 	flex-wrap: wrap;
 	justify-content: center;
 }
+
+@media only screen and (max-width: 430px) {
+	.profile{
+		height: 1000px;
+	}
+}

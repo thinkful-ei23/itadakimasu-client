@@ -20,12 +20,14 @@ export function LandingPage(props) {
         <main role="main">
             <div className="home">
                 {loggedOutMessage}
+                <div className="landing-page-parent">
                 <p className="intro"><h3>Food is the most important part of travel.</h3> <br /><br /> Why is that? Preparing and ordering food at home is routine. It's expected. But hop on a plane, and suddenly, acquiring food is a challenge. If you don't know the magic words, you're out of luck. You resort to pointing wildly at the menu, unaware of what dish will reach your table. <br /><br /> If you're planning a trip to Japan, or want to learn Japanese, Itadakimasu will help you learn the names of common Japanese dishes. Impress friends, waiters, and friends-who-are-also-waiters with your knowledge. Good luck, gourmand.</p>
                 <div className="btn-row">
                     <Link to="/login" className="btn-land btn-landL">Login</Link>
                     <Link to="/register" className="btn-land">Register</Link>
                 </div>
-                <div className="corner-pic" id="corner-pic"><img src="/img/resting.png" alt='Gudetama Resting' /></div>
+                <div className="corner-pic" id="corner-pic"><img className="gudetama" src="/img/resting.png" alt='Gudetama Resting' /></div>
+                </div>
             </div >
         </main>
     );

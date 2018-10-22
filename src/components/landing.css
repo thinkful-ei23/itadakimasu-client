@@ -5,8 +5,8 @@
 	flex-wrap: wrap;
 	background-color: #fff;
 	 background-image: linear-gradient(to right, rgba(245, 180, 61, 0.2), rgba(245, 180, 61, 0.6));
-	 height: 100vh;
 }
+
 #corner-pic {
 	display: flex;
 	flex-direction: row;
@@ -14,13 +14,27 @@
 	flex-wrap: wrap;
 }
 
-#corner-pic img {
-	width: 60rem
+.gudetama {
+	width: 35%;
+	height: 35%;
 }
+
+@media only screen and (max-width: 600px) {
+	.gudetama {
+		width: 70%;
+		height: 70%;
+	}
+}
+
+html,body{
+	margin:0;
+	height: 100vh;
+	width: 100vw;
+}
+
 .intro {
 	text-align: justify;
-	
-	margin: 0 4rem;
+	margin: 1.5rem 2rem;
 	border: .1rem solid #000;
 	font-size: 2rem;
 	line-height: 2rem;
@@ -29,6 +43,16 @@
 	color: #F5B43D;
 	color: #000;
 	box-shadow: 0 .4rem .6rem 0 hsla(0, 0%, 0%, 0.2);
+}
+.landing-page-parent{
+	width: 100%;
+	height: 100vh;
+}
+
+@media only screen and (max-width: 430px) {
+	.landing-page-parent{
+		height: 1000px;
+	}
 }
 .btn-row {
 	display: flex;

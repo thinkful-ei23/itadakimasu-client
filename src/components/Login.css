@@ -20,3 +20,16 @@ font-size: 2rem;
 color: #000;
 align-self: center;
 }
+
+@media only screen and (max-width: 380px) {
+	.home-login {
+		padding: 1rem;
+		width: 100%;
+	}
+	.reg_link {
+		padding: 1rem;
+	}
+	.login-reg {
+		width: 90%;
+	}
+}

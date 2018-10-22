@@ -13,6 +13,7 @@ input[type=text],
 input[type=password] {
 	font-size: 2.5rem;
 	border-radius: 1rem;
+	max-width: 100%;
 }
 .btn-in {
 	align-self:center;
@@ -34,4 +35,4 @@ input[type=password] {
 	background-color: brown;
 	color: #fff
 }
-
+ 

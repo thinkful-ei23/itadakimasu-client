@@ -53,3 +53,9 @@ h1 {
 	margin-left: 4em;
 	display: inline-block;
 }
+
+@media only screen and (max-width: 600px) {
+	.childNav {
+		display: inline-block;
+	}
+}

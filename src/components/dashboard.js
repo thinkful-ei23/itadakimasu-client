@@ -40,7 +40,7 @@ export class Dashboard extends React.Component {
     let resQuestion
 
     if (answer.toLowerCase() === this.props.currentQuestion.answer) {
-      const message = "You're correct!";
+      const message = <p className="results">You're correct!</p>;
       this.setState({
         message
       });
@@ -55,7 +55,7 @@ export class Dashboard extends React.Component {
     }
 
     else {
-      const message = `Sorry, the correct answer is ${this.props.currentQuestion.answer}`;
+      const message = <p className="results">The correct answer is <br />{this.props.currentQuestion.answer}</p>
       this.setState({
         message
       });
@@ -88,7 +88,6 @@ export class Dashboard extends React.Component {
         <div className="dashboard-username">
           Hello, {this.props.username}
         </div>
-        <section className="dash-input">
           <div className="dash-pic">
             <img className="image" src={this.props.currentQuestion.imageURL} alt={this.props.currentQuestion.imageDescription} />
             <p className="character">{this.props.currentQuestion.question}</p>
@@ -106,7 +105,7 @@ export class Dashboard extends React.Component {
                 className="btn-dash"
               >Submit</button>
               <div className="hidden" >
-                <div className="limit"><p className="results">{this.state.message}</p></div>
+                <div className="limit">{this.state.message}</div>
                 <p className="results">{this.props.correct}&nbsp;&nbsp;correct out of&nbsp;&nbsp;{this.props.questionsAsked}</p>
                 <div className="textCentered">
                 {nextButton}
@@ -114,7 +113,6 @@ export class Dashboard extends React.Component {
               </div>
             </form>
           </div>
-        </section >
       </main >
     );
   }

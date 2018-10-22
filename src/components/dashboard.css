@@ -51,8 +51,8 @@
 .character{
 	color:#777;
 	margin: 1rem 0;
-	font-size: 4rem;
-  letter-spacing: 3rem;
+	font-size: 3.5rem;
+  letter-spacing: 2rem;
 	text-align: center;
 }
 .label {
@@ -71,6 +71,7 @@ input[type=text] {
 	margin-right: auto;
 	margin-left: auto;
 }
+
 .results {
 	font-size: 2rem;
 	text-align: center;
@@ -110,6 +111,9 @@ input[type=text] {
 
 @media only screen and (max-width: 630px) {
 	.image {
-		width: 80%;
+		width: 70%;
+	}
+	.dashboard {
+		padding: 1em;
 	}
 }

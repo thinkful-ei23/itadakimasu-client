@@ -14,6 +14,7 @@
 	flex-wrap: wrap;
 }
 
+
 .gudetama {
 	width: 35%;
 	height: 35%;
@@ -81,4 +82,19 @@ html,body{
 	color: #fff;
 	border: transparent;
 }
-
+/* @media only screen and (max-width: 7200px) {
+	#corner-pic img {
+		width: 50rem
+	}
+	font-size: 55%;
+}
+@media only screen and (max-width: 560px) {
+	#corner-pic img {
+		width: 40rem
+	}
+}
+@media only screen and (max-width: 340px) {
+	#corner-pic img {
+		width: 30rem
+	}
+} */

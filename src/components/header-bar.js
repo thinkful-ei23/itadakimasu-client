@@ -21,17 +21,19 @@ export class HeaderBar extends React.Component {
         const inlineBlock = { display: "inline-block" }; // get rid of this later
         if (this.props.loggedIn) {
             logOutButton = (
-               <button className="btn-out" onClick={() => this.logOut()}>Log out</button>
+                <li className="childNav centered"><button className="btn-out" onClick={() => this.logOut()}>Log out</button></li>
             );
-            profileLink =<Link to="/profile" className="link progress-link"><h2>Your progress</h2></Link>
+            profileLink = <li className="link-profile childNav centered"><Link to="/profile" className="link progress-link"><h2>Your progress</h2></Link></li>
         }
         // inside nav should be ul, li's - don't want to mess up the css
         return (
             <nav role="navigation">
                 <div className="header-bar">
-                       <Link to="/dashboard" className="link"><h1>Itadakimasu!</h1></Link>
+                    <ul className="flex-container" >
+                        <li className="childNav" style={inlineBlock}><Link to="/dashboard" className="link"><h1>Itadakimasu!</h1></Link></li>
                         {profileLink}
                         {logOutButton}
+                    </ul>
                 </div>
             </nav>
         );

@@ -47,7 +47,6 @@ export class Profile extends React.Component {
 					<td> {question.successes} correct out of {question.attempts}</td>
 				</tr>
 			));
-			console.log(this.props.u)
 
 			return (
 				<main role="main" className="profile">

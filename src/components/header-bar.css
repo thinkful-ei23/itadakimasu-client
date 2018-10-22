@@ -17,15 +17,18 @@ h1 {
 	text-decoration: none;
 }
 .link-profile {
+	height: 25px;
 	padding: .5rem;
 	color: #F5B43D;
 	background-color: #ddd;
 	border-radius: 1rem;
 	box-shadow: 0 .4rem .6rem 0 hsla(0, 0%, 0%, 0.2);
+	margin-top:25px;
 }
 .btn-out {
 	font-family: "Lato", sans-serif;
 	margin-top: 2rem;
+	margin-bottom: 2rem;
 	max-width: 20rem;
 	padding: 1.5rem 1rem;
 	border-radius: 1rem;
@@ -49,13 +52,36 @@ h1 {
 }
 
 .childNav {
-	margin-right: 4em;
-	margin-left: 4em;
-	display: inline-block;
+	margin-right: 2em;
+	margin-left: 2em;
 }
 
-@media only screen and (max-width: 600px) {
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+.flex-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+@media only screen and (max-width: 630px) {
+  .flex-container {
+    flex-direction: column;
+	}
 	.childNav {
-		display: inline-block;
+		margin: 0;
+	}
+	.link-profile{
+		width: 120px;
+	}
+	.centered {
+		margin-left: auto;
+		margin-right: auto;
 	}
 }

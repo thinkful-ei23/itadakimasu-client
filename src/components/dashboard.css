@@ -63,19 +63,21 @@ input[type=text] {
 	border-radius: 1rem;
 	background-color: #fff;
 	border-radius: 1rem;
-	margin-bottom: 2rem;
+	margin-bottom: 1rem;
 	max-width: 100%;
 	margin-right: auto;
 	margin-left: auto;
 }
 
 .results {
+	margin-top: 2rem;
 	font-size: 2rem;
 	text-align: center;
 	overflow-wrap: break-word;
 }
 
 .btn-dash {
+	height: 5rem;
 	max-width: 20rem;
 	padding: .5rem 4rem;
 	margin: 0 0 .75rem 0;

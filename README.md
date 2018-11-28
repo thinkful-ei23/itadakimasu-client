@@ -1,11 +1,5 @@
 # Itadakimasu!
 
-Don't want to register? Here's a demo user and password:
-
-username: demo
-
-password: demoUser1234
-
 ## Introduction
 Food is the most important part of travel.
 
@@ -17,6 +11,12 @@ If you're planning a trip to Japan, or want to learn Japanese, Itadakimasu will 
 Spaced repetition is a learning technique that has found mainstream success in a wide variety of learning applications. This technique is perfect for language learning, which requires students to learn a large number of items and retain them indefinitely in memory. As you encounter pieces of information more and more, the less often you need to refresh your memory of it. 
 
 ## Start Learning
+Don't want to register? Here's a demo user and password:
+
+username: demo
+
+password: demoUser1234
+
 Check out the application [here](https://polar-dawn-64935.herokuapp.com/).
 
 ## Key Parts of Project

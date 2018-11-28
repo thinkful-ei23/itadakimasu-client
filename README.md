@@ -1,5 +1,9 @@
 # Itadakimasu!
 
+Don't want to register? Here's a demo user and password:
+username: demo
+password: demoUser1234
+
 ## Introduction
 Food is the most important part of travel.
 

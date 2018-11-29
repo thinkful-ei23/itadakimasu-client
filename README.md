@@ -56,5 +56,10 @@ The server side code for this project is [here](https://github.com/thinkful-ei23
 * mongoose
 * jwt
 
+## API Documentation
+
+[Click to view API Documentation](https://documenter.getpostman.com/view/4934035/Rzfdoq9v)
+
+
 ## License
 [GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/)

@@ -17,7 +17,13 @@ username: demo
 
 password: demoUser1234
 
-Check out the application [here](https://polar-dawn-64935.herokuapp.com/).
+Check out the application [here](https://mighty-cove-75413.herokuapp.com/).
+
+## Screenshots 
+
+<img alt="Landing Page" src="public/img/screenshot2.jpg" width="600">
+<img alt="Dashboard" src="public/img/screenshot1.jpg" width="600">
+<img alt="Profile" src="public/img/screenshot3.jpg" width="600">
 
 ## Key Parts of Project
 At the core of this application is the spaced repetition algorithm. We've written our code so that as the user answers questions, we dynamically update the sequence of incoming questions to optimize their learning experience. Questions the user answers incorrectly appear more frequently. We hold off on displaying words the user has committed to memory. Implementation of this algorithm can be found in the server side repo:
@@ -49,6 +55,11 @@ The server side code for this project is [here](https://github.com/thinkful-ei23
 * passport
 * mongoose
 * jwt
+
+## API Documentation
+
+[Click to view API Documentation](https://documenter.getpostman.com/view/4934035/Rzfdoq9v)
+
 
 ## License
 [GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/)

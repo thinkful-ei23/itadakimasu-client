@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import requiresLogin from './requires-login';
 import { fetchQuestion, postResult, incrementQuestions, incrementCorrect } from '../actions/question';
 import './dashboard.css';
+import {API_BASE_URL} from '../config';
 
 export class Dashboard extends React.Component {
   constructor(props) {
@@ -15,6 +16,7 @@ export class Dashboard extends React.Component {
 
   componentDidMount() {
     this.props.dispatch(fetchQuestion());
+    console.log(API_BASE_URL);
   }
 
   clearValues() {

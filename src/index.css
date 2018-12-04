@@ -14,3 +14,11 @@ body {
     color: #777;
     box-sizing: border-box;
 }
+
+a {
+    color: #b43;
+}
+
+a:hover {
+    color: black;
+}

@@ -16,7 +16,6 @@ export class Dashboard extends React.Component {
 
   componentDidMount() {
     this.props.dispatch(fetchQuestion());
-    console.log(API_BASE_URL);
   }
 
   clearValues() {

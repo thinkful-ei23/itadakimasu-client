@@ -17,7 +17,7 @@ username: demo
 
 password: demoUser1234
 
-Check out the application [here](https://mighty-cove-75413.herokuapp.com/).
+Check out the application [here](https://itadakimasu-client-side.herokuapp.com/).
 
 ## Screenshots 
 
